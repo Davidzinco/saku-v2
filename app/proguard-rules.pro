@@ -1,0 +1,2 @@
+-keepattributes *Annotation*
+-keepclassmembers class com.saku.v2.data.model.** { *; }

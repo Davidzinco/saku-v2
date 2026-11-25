@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Saku</string>
+    <string name="widget_description">Pantau total saldo dan 3 transaksi terbaru Saku dengan tombol catat cepat.</string>
+    <string name="notification_listener_label">Quick-Log E-Wallet Saku</string>
+    <string name="widget_badge_v2">Saku V2</string>
+    <string name="widget_total_balance_label">• Total Saldo</string>
+    <string name="widget_quick_add">+ Catat</string>
+    <string name="widget_empty_transactions">Belum ada transaksi tercatat</string>
+</resources>
