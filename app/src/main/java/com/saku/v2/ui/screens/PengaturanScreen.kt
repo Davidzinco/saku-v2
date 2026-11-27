@@ -726,17 +726,19 @@ private fun SettingsIconTile(
     tint: Color,
     containerColor: Color
 ) {
+    @Suppress("UNUSED_VARIABLE")
+    val unusedContainer = containerColor
     Box(
         modifier = Modifier
             .size(38.dp)
             .clip(RoundedCornerShape(12.dp))
-            .background(containerColor),
+            .background(tint.copy(alpha = 1f)),
         contentAlignment = Alignment.Center
     ) {
         Icon(
             imageVector = icon,
             contentDescription = null,
-            tint = tint,
+            tint = Color.White,
             modifier = Modifier.size(20.dp)
         )
     }
