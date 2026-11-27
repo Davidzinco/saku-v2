@@ -34,6 +34,8 @@ import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.NotificationsActive
 import androidx.compose.material.icons.rounded.Savings
+import androidx.compose.material.icons.rounded.Schedule
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -49,8 +51,10 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TimePicker
 import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -89,6 +93,8 @@ import java.time.LocalDate
 import java.time.LocalTime
 import java.time.ZoneId
 import java.time.ZoneOffset
+import java.time.format.DateTimeFormatter
+import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -175,8 +181,9 @@ fun TransactionFormSheet(
         Instant.ofEpochMilli(initialEpochMs).atZone(zoneId)
     }
     var selectedDate by remember(formSeedKey) { mutableStateOf(initialZoned.toLocalDate()) }
-    val preservedTime = remember(formSeedKey) { initialZoned.toLocalTime() }
+    var selectedTime by remember(formSeedKey) { mutableStateOf(initialZoned.toLocalTime()) }
     var showDatePicker by remember { mutableStateOf(false) }
+    var showTimePicker by remember { mutableStateOf(false) }
 
     val availableCategories = remember(state.categories, txType, initialTransaction?.categoryId) {
         state.categories.filter { cat ->
@@ -511,10 +518,10 @@ fun TransactionFormSheet(
                 }
             }
 
-            // Date selector
+            // Date & time selector
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(
-                    text = "Tanggal",
+                    text = "Tanggal & Jam",
                     style = MaterialTheme.typography.labelLarge,
                     color = colors.textSecondary
                 )
@@ -524,10 +531,13 @@ fun TransactionFormSheet(
                     selectedDate.atTime(LocalTime.NOON).atZone(zoneId).toInstant().toEpochMilli(),
                     zoneId
                 )
+                val timeLabel = remember(selectedTime) {
+                    selectedTime.format(DateTimeFormatter.ofPattern("HH:mm", Locale.ROOT))
+                }
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
                     DateOptionPill(
                         label = "Hari ini",
@@ -543,7 +553,7 @@ fun TransactionFormSheet(
                     )
                     Row(
                         modifier = Modifier
-                            .weight(1.25f)
+                            .weight(1.1f)
                             .clip(RoundedCornerShape(12.dp))
                             .background(
                                 if (selectedDate != today && selectedDate != yesterday) colors.primaryContainer
@@ -555,20 +565,49 @@ fun TransactionFormSheet(
                                 shape = RoundedCornerShape(12.dp)
                             )
                             .clickable { showDatePicker = true }
-                            .padding(horizontal = 10.dp, vertical = 9.dp),
-                        horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally),
+                            .padding(horizontal = 8.dp, vertical = 9.dp),
+                        horizontalArrangement = Arrangement.spacedBy(4.dp, Alignment.CenterHorizontally),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
                             imageVector = Icons.Rounded.CalendarMonth,
                             contentDescription = null,
                             tint = if (selectedDate != today && selectedDate != yesterday) colors.primary else colors.textSecondary,
-                            modifier = Modifier.size(16.dp)
+                            modifier = Modifier.size(15.dp)
                         )
                         Text(
-                            text = if (selectedDate != today && selectedDate != yesterday) customDateLabel else "Pilih Tanggal",
+                            text = if (selectedDate != today && selectedDate != yesterday) customDateLabel else "Pilih Tgl",
                             style = MaterialTheme.typography.labelMedium.tabularNums,
                             color = if (selectedDate != today && selectedDate != yesterday) colors.primary else colors.textSecondary,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    }
+                    Row(
+                        modifier = Modifier
+                            .weight(0.95f)
+                            .clip(RoundedCornerShape(12.dp))
+                            .background(colors.canvasGradientMid)
+                            .border(
+                                width = 0.75.dp,
+                                color = colors.cardBorderSubtle,
+                                shape = RoundedCornerShape(12.dp)
+                            )
+                            .clickable { showTimePicker = true }
+                            .padding(horizontal = 8.dp, vertical = 9.dp),
+                        horizontalArrangement = Arrangement.spacedBy(4.dp, Alignment.CenterHorizontally),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.Schedule,
+                            contentDescription = "Pilih jam",
+                            tint = colors.textSecondary,
+                            modifier = Modifier.size(15.dp)
+                        )
+                        Text(
+                            text = timeLabel,
+                            style = MaterialTheme.typography.labelMedium.tabularNums,
+                            color = colors.textPrimary,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -712,7 +751,7 @@ fun TransactionFormSheet(
 
             Button(
                 onClick = {
-                    val epochMs = selectedDate.atTime(preservedTime).atZone(zoneId).toInstant().toEpochMilli()
+                    val epochMs = selectedDate.atTime(selectedTime).atZone(zoneId).toInstant().toEpochMilli()
                     if (initialTransaction != null) {
                         onUpdateExisting(
                             initialTransaction.copy(
@@ -797,6 +836,43 @@ fun TransactionFormSheet(
         ) {
             DatePicker(state = datePickerState)
         }
+    }
+
+    if (showTimePicker) {
+        val timePickerState = rememberTimePickerState(
+            initialHour = selectedTime.hour,
+            initialMinute = selectedTime.minute,
+            is24Hour = true
+        )
+        AlertDialog(
+            onDismissRequest = { showTimePicker = false },
+            containerColor = colors.sheetSurface,
+            titleContentColor = colors.textPrimary,
+            title = {
+                Text(
+                    text = "Pilih Jam",
+                    style = MaterialTheme.typography.titleMedium
+                )
+            },
+            text = {
+                TimePicker(state = timePickerState)
+            },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        selectedTime = LocalTime.of(timePickerState.hour, timePickerState.minute)
+                        showTimePicker = false
+                    }
+                ) {
+                    Text("Pilih")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showTimePicker = false }) {
+                    Text("Batal")
+                }
+            }
+        )
     }
 }
 
