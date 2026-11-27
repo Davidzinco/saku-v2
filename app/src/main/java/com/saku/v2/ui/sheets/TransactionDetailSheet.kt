@@ -342,26 +342,20 @@ fun TransactionDetailSheet(
                             contentScale = ContentScale.Crop,
                             modifier = Modifier.fillMaxSize()
                         )
-                        Row(
+                        Box(
                             modifier = Modifier
                                 .align(Alignment.BottomEnd)
                                 .padding(10.dp)
-                                .clip(RoundedCornerShape(999.dp))
-                                .background(colors.sheetSurface.copy(alpha = 0.88f))
-                                .padding(horizontal = 10.dp, vertical = 6.dp),
-                            horizontalArrangement = Arrangement.spacedBy(4.dp),
-                            verticalAlignment = Alignment.CenterVertically
+                                .size(30.dp)
+                                .clip(RoundedCornerShape(8.dp))
+                                .background(colors.sheetSurface.copy(alpha = 0.90f)),
+                            contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Rounded.ZoomIn,
-                                contentDescription = null,
-                                tint = colors.textPrimary,
+                                contentDescription = "Perbesar foto struk",
+                                tint = colors.primary,
                                 modifier = Modifier.size(16.dp)
-                            )
-                            Text(
-                                text = "Perbesar",
-                                style = MaterialTheme.typography.labelSmall,
-                                color = colors.textPrimary
                             )
                         }
                     }
