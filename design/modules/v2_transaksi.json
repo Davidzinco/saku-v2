@@ -1,0 +1,3602 @@
+{
+  "command": "command.batch",
+  "params": {
+    "label": "V2 — Transaksi",
+    "commands": [
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Aurora Canvas",
+          "parent": 222,
+          "select": false,
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "props": {
+            "fills": [
+              {
+                "type": "linearGradient",
+                "from": [
+                  0.5,
+                  0
+                ],
+                "to": [
+                  0.5,
+                  1
+                ],
+                "stops": [
+                  "#F5F3EE",
+                  "#EDEAE3",
+                  "#E6EBE7"
+                ]
+              }
+            ]
+          }
+        },
+        "as": "tr_bg_1"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Aurora Pool Sage",
+          "parent": 222,
+          "select": false,
+          "x": -104,
+          "y": -42,
+          "width": 340,
+          "height": 340,
+          "props": {
+            "fills": [
+              {
+                "type": "radialGradient",
+                "from": [
+                  0.5,
+                  0.5
+                ],
+                "to": [
+                  1.0,
+                  0.5
+                ],
+                "stops": [
+                  "#D8E4DE8C",
+                  "#D8E4DE38",
+                  "#D8E4DE00"
+                ]
+              }
+            ]
+          }
+        },
+        "as": "tr_blob_2"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Aurora Pool Limestone",
+          "parent": 222,
+          "select": false,
+          "x": 188,
+          "y": 210,
+          "width": 330,
+          "height": 330,
+          "props": {
+            "fills": [
+              {
+                "type": "radialGradient",
+                "from": [
+                  0.5,
+                  0.5
+                ],
+                "to": [
+                  1.0,
+                  0.5
+                ],
+                "stops": [
+                  "#EAE0D385",
+                  "#EAE0D338",
+                  "#EAE0D300"
+                ]
+              }
+            ]
+          }
+        },
+        "as": "tr_blob_3"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Aurora Pool Slate",
+          "parent": 222,
+          "select": false,
+          "x": -80,
+          "y": 560,
+          "width": 360,
+          "height": 360,
+          "props": {
+            "fills": [
+              {
+                "type": "radialGradient",
+                "from": [
+                  0.5,
+                  0.5
+                ],
+                "to": [
+                  1.0,
+                  0.5
+                ],
+                "stops": [
+                  "#DCE3EC7A",
+                  "#DCE3EC38",
+                  "#DCE3EC00"
+                ]
+              }
+            ]
+          }
+        },
+        "as": "tr_blob_4"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Status Bar",
+          "parent": 222,
+          "select": false,
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 40,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              12,
+              24,
+              6,
+              24
+            ],
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_sb_5"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "09:41",
+          "parent": {
+            "$ref": "tr_sb_5"
+          },
+          "select": false,
+          "text": "09:41",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13,
+            "fill": "#16181A",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Status Icons",
+          "parent": {
+            "$ref": "tr_sb_5"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 6,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_sb_r_6"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Signal",
+          "parent": {
+            "$ref": "tr_sb_r_6"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "max",
+            "gap": 1.5,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_sig_7"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Sig0",
+          "parent": {
+            "$ref": "tr_sig_7"
+          },
+          "select": false,
+          "width": 2.5,
+          "height": 4,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_8"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Sig1",
+          "parent": {
+            "$ref": "tr_sig_7"
+          },
+          "select": false,
+          "width": 2.5,
+          "height": 6,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_9"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Sig2",
+          "parent": {
+            "$ref": "tr_sig_7"
+          },
+          "select": false,
+          "width": 2.5,
+          "height": 8,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_10"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Sig3",
+          "parent": {
+            "$ref": "tr_sig_7"
+          },
+          "select": false,
+          "width": 2.5,
+          "height": 10,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_11"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Wifi",
+          "parent": {
+            "$ref": "tr_sb_r_6"
+          },
+          "select": false,
+          "width": 13,
+          "height": 10,
+          "props": {
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_wifi_12"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "W1",
+          "parent": {
+            "$ref": "tr_wifi_12"
+          },
+          "select": false,
+          "x": 1,
+          "y": 1,
+          "width": 11,
+          "height": 2,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_13"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "W2",
+          "parent": {
+            "$ref": "tr_wifi_12"
+          },
+          "select": false,
+          "x": 3,
+          "y": 4.5,
+          "width": 7,
+          "height": 2,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_14"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "W3",
+          "parent": {
+            "$ref": "tr_wifi_12"
+          },
+          "select": false,
+          "x": 5,
+          "y": 7.5,
+          "width": 3,
+          "height": 2.5,
+          "props": {
+            "fill": "#16181A"
+          }
+        },
+        "as": "tr_e_15"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Battery",
+          "parent": {
+            "$ref": "tr_sb_r_6"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 1.5,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_bat_16"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Battery Body",
+          "parent": {
+            "$ref": "tr_bat_16"
+          },
+          "select": false,
+          "width": 21,
+          "height": 11,
+          "props": {
+            "fill": "none",
+            "stroke": "#16181A",
+            "strokeWeight": 1.2,
+            "cornerRadius": 3,
+            "padding": 2,
+            "layout": "horizontal",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_batb_17"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Battery Fill",
+          "parent": {
+            "$ref": "tr_batb_17"
+          },
+          "select": false,
+          "width": 13,
+          "height": 7,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1.2
+          }
+        },
+        "as": "tr_r_18"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Battery Tip",
+          "parent": {
+            "$ref": "tr_bat_16"
+          },
+          "select": false,
+          "width": 2,
+          "height": 5,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_19"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Transaksi Content",
+          "parent": 222,
+          "select": false,
+          "x": 20,
+          "y": 46,
+          "width": 372,
+          "props": {
+            "layout": "vertical",
+            "gap": 10,
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_col_20"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Header",
+          "parent": {
+            "$ref": "tr_col_20"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_hdr_21"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Transaksi",
+          "parent": {
+            "$ref": "tr_hdr_21"
+          },
+          "select": false,
+          "text": "Transaksi",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Extra Bold",
+            "fontSize": 24,
+            "fill": "#16181A",
+            "letterSpacing": -0.4
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Catat CTA",
+          "parent": {
+            "$ref": "tr_hdr_21"
+          },
+          "select": false,
+          "height": 40,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 5,
+            "padding": [
+              0,
+              16,
+              0,
+              14
+            ],
+            "fill": "#1E4D45",
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_cta_22"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "+ Catat",
+          "parent": {
+            "$ref": "tr_cta_22"
+          },
+          "select": false,
+          "text": "+ Catat",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Month Switcher",
+          "parent": {
+            "$ref": "tr_col_20"
+          },
+          "select": false,
+          "height": 44,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              6,
+              10,
+              6,
+              10
+            ],
+            "fill": "#FFFFFFAD",
+            "cornerRadius": 20,
+            "sizingH": "fill",
+            "sizingV": "fixed",
+            "strokes": [
+              {
+                "type": "linearGradient",
+                "from": [
+                  0.5,
+                  0
+                ],
+                "to": [
+                  0.5,
+                  1
+                ],
+                "stops": [
+                  "#FFFFFFE6",
+                  "#1A1D1F14"
+                ]
+              }
+            ],
+            "strokeWeight": 0.75
+          }
+        },
+        "as": "tr_ms_23"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Prev",
+          "parent": {
+            "$ref": "tr_ms_23"
+          },
+          "select": false,
+          "width": 30,
+          "height": 30,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#FAF9F6CC",
+            "cornerRadius": 999,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_mbtn_24"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "‹",
+          "parent": {
+            "$ref": "tr_mbtn_24"
+          },
+          "select": false,
+          "text": "‹",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 16,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "November 2026",
+          "parent": {
+            "$ref": "tr_ms_23"
+          },
+          "select": false,
+          "text": "November 2026",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 15,
+            "fill": "#16181A",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Next",
+          "parent": {
+            "$ref": "tr_ms_23"
+          },
+          "select": false,
+          "width": 30,
+          "height": 30,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#FAF9F6CC",
+            "cornerRadius": 999,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_mbtn_25"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "›",
+          "parent": {
+            "$ref": "tr_mbtn_25"
+          },
+          "select": false,
+          "text": "›",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 16,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Search & Filters",
+          "parent": {
+            "$ref": "tr_col_20"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 8,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_sf_26"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Search Field",
+          "parent": {
+            "$ref": "tr_sf_26"
+          },
+          "select": false,
+          "height": 40,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 9,
+            "padding": [
+              0,
+              14,
+              0,
+              14
+            ],
+            "fill": "#FFFFFFD9",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 16,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_srch_27"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon search",
+          "parent": {
+            "$ref": "tr_srch_27"
+          },
+          "select": false,
+          "width": 15,
+          "height": 15,
+          "props": {
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_ic_28"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "SrcRing",
+          "parent": {
+            "$ref": "tr_ic_28"
+          },
+          "select": false,
+          "x": 1.9,
+          "y": 1.9,
+          "width": 8.9,
+          "height": 8.9,
+          "props": {
+            "fill": "none",
+            "stroke": "#8A8F98",
+            "strokeWeight": 1.6
+          }
+        },
+        "as": "tr_e_29"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "SrcBar",
+          "parent": {
+            "$ref": "tr_ic_28"
+          },
+          "select": false,
+          "x": 9.2,
+          "y": 10.1,
+          "width": 4.3,
+          "height": 1.6,
+          "props": {
+            "fill": "#8A8F98",
+            "cornerRadius": 1,
+            "rotation": 45
+          }
+        },
+        "as": "tr_r_30"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Cari catatan, kategori, ",
+          "parent": {
+            "$ref": "tr_srch_27"
+          },
+          "select": false,
+          "text": "Cari catatan, kategori, atau akun...",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 13,
+            "fill": "#8A8F98"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Filter Pills",
+          "parent": {
+            "$ref": "tr_sf_26"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 6,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_fprow_31"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Pill Semua",
+          "parent": {
+            "$ref": "tr_fprow_31"
+          },
+          "select": false,
+          "height": 30,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              11,
+              0,
+              11
+            ],
+            "fill": "#E2EDE9",
+            "stroke": "#1E4D452E",
+            "strokeWeight": 0.75,
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_fp_32"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Semua",
+          "parent": {
+            "$ref": "tr_fp_32"
+          },
+          "select": false,
+          "text": "Semua",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12,
+            "fill": "#1E4D45"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Pill Keluar",
+          "parent": {
+            "$ref": "tr_fprow_31"
+          },
+          "select": false,
+          "height": 30,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              11,
+              0,
+              11
+            ],
+            "fill": "#FFFFFFD9",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_fp_33"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Keluar",
+          "parent": {
+            "$ref": "tr_fp_33"
+          },
+          "select": false,
+          "text": "Keluar",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Pill Masuk",
+          "parent": {
+            "$ref": "tr_fprow_31"
+          },
+          "select": false,
+          "height": 30,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              11,
+              0,
+              11
+            ],
+            "fill": "#FFFFFFD9",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_fp_34"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Masuk",
+          "parent": {
+            "$ref": "tr_fp_34"
+          },
+          "select": false,
+          "text": "Masuk",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Pill Pindah",
+          "parent": {
+            "$ref": "tr_fprow_31"
+          },
+          "select": false,
+          "height": 30,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              11,
+              0,
+              11
+            ],
+            "fill": "#FFFFFFD9",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_fp_35"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Pindah",
+          "parent": {
+            "$ref": "tr_fp_35"
+          },
+          "select": false,
+          "text": "Pindah",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Pill Akun ▾",
+          "parent": {
+            "$ref": "tr_fprow_31"
+          },
+          "select": false,
+          "height": 30,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              11,
+              0,
+              11
+            ],
+            "fill": "#FFFFFFD9",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_fp_36"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Akun ▾",
+          "parent": {
+            "$ref": "tr_fp_36"
+          },
+          "select": false,
+          "text": "Akun ▾",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Ringkasan Cashflow Card",
+          "parent": {
+            "$ref": "tr_col_20"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 10,
+            "padding": [
+              14,
+              16,
+              14,
+              16
+            ],
+            "fill": "#FFFFFFAD",
+            "cornerRadius": 22,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "strokes": [
+              {
+                "type": "linearGradient",
+                "from": [
+                  0.5,
+                  0
+                ],
+                "to": [
+                  0.5,
+                  1
+                ],
+                "stops": [
+                  "#FFFFFFE6",
+                  "#1A1D1F14"
+                ]
+              }
+            ],
+            "strokeWeight": 0.75
+          }
+        },
+        "as": "tr_sum_37"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Ringkasan Cashflow & Bud",
+          "parent": {
+            "$ref": "tr_sum_37"
+          },
+          "select": false,
+          "text": "Ringkasan Cashflow & Budget",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Summary Tiles",
+          "parent": {
+            "$ref": "tr_sum_37"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 8,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_stls_38"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tile Masuk",
+          "parent": {
+            "$ref": "tr_stls_38"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 3,
+            "padding": [
+              8,
+              10,
+              8,
+              10
+            ],
+            "fill": "#FAF9F6CC",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 12,
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_stl_39"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Masuk",
+          "parent": {
+            "$ref": "tr_stl_39"
+          },
+          "select": false,
+          "text": "Masuk",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Rp 12,5 jt",
+          "parent": {
+            "$ref": "tr_stl_39"
+          },
+          "select": false,
+          "text": "Rp 12,5 jt",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 13,
+            "fill": "#2A6B57",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tile Keluar",
+          "parent": {
+            "$ref": "tr_stls_38"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 3,
+            "padding": [
+              8,
+              10,
+              8,
+              10
+            ],
+            "fill": "#FAF9F6CC",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 12,
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_stl_40"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Keluar",
+          "parent": {
+            "$ref": "tr_stl_40"
+          },
+          "select": false,
+          "text": "Keluar",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Rp 7,3 jt",
+          "parent": {
+            "$ref": "tr_stl_40"
+          },
+          "select": false,
+          "text": "Rp 7,3 jt",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 13,
+            "fill": "#B8563F",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tile Selisih",
+          "parent": {
+            "$ref": "tr_stls_38"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 3,
+            "padding": [
+              8,
+              10,
+              8,
+              10
+            ],
+            "fill": "#FAF9F6CC",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 12,
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_stl_41"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Selisih",
+          "parent": {
+            "$ref": "tr_stl_41"
+          },
+          "select": false,
+          "text": "Selisih",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "+Rp 5,2 jt",
+          "parent": {
+            "$ref": "tr_stl_41"
+          },
+          "select": false,
+          "text": "+Rp 5,2 jt",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 13,
+            "fill": "#1E4D45",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Budget Bar Block",
+          "parent": {
+            "$ref": "tr_sum_37"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 5,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_bb_42"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Budget Top",
+          "parent": {
+            "$ref": "tr_bb_42"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_bt_43"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Pemakaian Budget Bulanan",
+          "parent": {
+            "$ref": "tr_bt_43"
+          },
+          "select": false,
+          "text": "Pemakaian Budget Bulanan",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "86% • Rp 8,5 jt",
+          "parent": {
+            "$ref": "tr_bt_43"
+          },
+          "select": false,
+          "text": "86% • Rp 8,5 jt",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11.5,
+            "fill": "#A87633",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Progress Track",
+          "parent": {
+            "$ref": "tr_bb_42"
+          },
+          "select": false,
+          "height": 7,
+          "props": {
+            "fill": "#1A1D1F14",
+            "cornerRadius": 999,
+            "clip": true,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_trk_44"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Progress Fill",
+          "parent": {
+            "$ref": "tr_trk_44"
+          },
+          "select": false,
+          "x": 0,
+          "y": 0,
+          "width": 292,
+          "height": 7,
+          "props": {
+            "fill": "#A87633",
+            "cornerRadius": 999
+          }
+        },
+        "as": "tr_pfl_45"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Divider",
+          "parent": {
+            "$ref": "tr_sum_37"
+          },
+          "select": false,
+          "height": 1,
+          "props": {
+            "fill": "#1A1D1F14",
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_r_46"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Pengeluaran per Kategori",
+          "parent": {
+            "$ref": "tr_sum_37"
+          },
+          "select": false,
+          "text": "Pengeluaran per Kategori",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Cat Makan & Minum",
+          "parent": {
+            "$ref": "tr_sum_37"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 9,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_cat_47"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Badge M",
+          "parent": {
+            "$ref": "tr_cat_47"
+          },
+          "select": false,
+          "width": 26,
+          "height": 26,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F6E6E2",
+            "cornerRadius": 8,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_bdg_48"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "M",
+          "parent": {
+            "$ref": "tr_bdg_48"
+          },
+          "select": false,
+          "text": "M",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 11,
+            "fill": "#B8563F"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Cat Right",
+          "parent": {
+            "$ref": "tr_cat_47"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 4,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_catr_49"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Cat Top",
+          "parent": {
+            "$ref": "tr_catr_49"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_catt_50"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Makan & Minum",
+          "parent": {
+            "$ref": "tr_catt_50"
+          },
+          "select": false,
+          "text": "Makan & Minum",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Rp 2,4 jt / Rp 3 jt",
+          "parent": {
+            "$ref": "tr_catt_50"
+          },
+          "select": false,
+          "text": "Rp 2,4 jt / Rp 3 jt",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Progress Track",
+          "parent": {
+            "$ref": "tr_catr_49"
+          },
+          "select": false,
+          "height": 5,
+          "props": {
+            "fill": "#1A1D1F14",
+            "cornerRadius": 999,
+            "clip": true,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_trk_51"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Progress Fill",
+          "parent": {
+            "$ref": "tr_trk_51"
+          },
+          "select": false,
+          "x": 0,
+          "y": 0,
+          "width": 244,
+          "height": 5,
+          "props": {
+            "fill": "#B8563F",
+            "cornerRadius": 999
+          }
+        },
+        "as": "tr_pfl_52"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Cat Belanja & Rumah",
+          "parent": {
+            "$ref": "tr_sum_37"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 9,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_cat_53"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Badge B",
+          "parent": {
+            "$ref": "tr_cat_53"
+          },
+          "select": false,
+          "width": 26,
+          "height": 26,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#E6ECF3",
+            "cornerRadius": 8,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_bdg_54"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "B",
+          "parent": {
+            "$ref": "tr_bdg_54"
+          },
+          "select": false,
+          "text": "B",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 11,
+            "fill": "#3D5473"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Cat Right",
+          "parent": {
+            "$ref": "tr_cat_53"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 4,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_catr_55"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Cat Top",
+          "parent": {
+            "$ref": "tr_catr_55"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_catt_56"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Belanja & Rumah",
+          "parent": {
+            "$ref": "tr_catt_56"
+          },
+          "select": false,
+          "text": "Belanja & Rumah",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Rp 1,9 jt / Rp 2,5 jt",
+          "parent": {
+            "$ref": "tr_catt_56"
+          },
+          "select": false,
+          "text": "Rp 1,9 jt / Rp 2,5 jt",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Progress Track",
+          "parent": {
+            "$ref": "tr_catr_55"
+          },
+          "select": false,
+          "height": 5,
+          "props": {
+            "fill": "#1A1D1F14",
+            "cornerRadius": 999,
+            "clip": true,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_trk_57"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Progress Fill",
+          "parent": {
+            "$ref": "tr_trk_57"
+          },
+          "select": false,
+          "x": 0,
+          "y": 0,
+          "width": 232,
+          "height": 5,
+          "props": {
+            "fill": "#3D5473",
+            "cornerRadius": 999
+          }
+        },
+        "as": "tr_pfl_58"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Cat Transportasi",
+          "parent": {
+            "$ref": "tr_sum_37"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 9,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_cat_59"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Badge T",
+          "parent": {
+            "$ref": "tr_cat_59"
+          },
+          "select": false,
+          "width": 26,
+          "height": 26,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F4ECE0",
+            "cornerRadius": 8,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_bdg_60"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "T",
+          "parent": {
+            "$ref": "tr_bdg_60"
+          },
+          "select": false,
+          "text": "T",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 11,
+            "fill": "#A87633"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Cat Right",
+          "parent": {
+            "$ref": "tr_cat_59"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 4,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_catr_61"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Cat Top",
+          "parent": {
+            "$ref": "tr_catr_61"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_catt_62"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Transportasi",
+          "parent": {
+            "$ref": "tr_catt_62"
+          },
+          "select": false,
+          "text": "Transportasi",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Rp 1,1 jt / Rp 1,5 jt",
+          "parent": {
+            "$ref": "tr_catt_62"
+          },
+          "select": false,
+          "text": "Rp 1,1 jt / Rp 1,5 jt",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Progress Track",
+          "parent": {
+            "$ref": "tr_catr_61"
+          },
+          "select": false,
+          "height": 5,
+          "props": {
+            "fill": "#1A1D1F14",
+            "cornerRadius": 999,
+            "clip": true,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_trk_63"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Progress Fill",
+          "parent": {
+            "$ref": "tr_trk_63"
+          },
+          "select": false,
+          "x": 0,
+          "y": 0,
+          "width": 223,
+          "height": 5,
+          "props": {
+            "fill": "#A87633",
+            "cornerRadius": 999
+          }
+        },
+        "as": "tr_pfl_64"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Date Header Hari Ini",
+          "parent": {
+            "$ref": "tr_col_20"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              2,
+              2,
+              0,
+              2
+            ],
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_gh_65"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Hari Ini",
+          "parent": {
+            "$ref": "tr_gh_65"
+          },
+          "select": false,
+          "text": "Hari Ini",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "2 transaksi",
+          "parent": {
+            "$ref": "tr_gh_65"
+          },
+          "select": false,
+          "text": "2 transaksi",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Group Hari Ini Card",
+          "parent": {
+            "$ref": "tr_col_20"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 10,
+            "padding": [
+              12,
+              14,
+              12,
+              14
+            ],
+            "fill": "#FFFFFFAD",
+            "cornerRadius": 20,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "strokes": [
+              {
+                "type": "linearGradient",
+                "from": [
+                  0.5,
+                  0
+                ],
+                "to": [
+                  0.5,
+                  1
+                ],
+                "stops": [
+                  "#FFFFFFE6",
+                  "#1A1D1F14"
+                ]
+              }
+            ],
+            "strokeWeight": 0.75
+          }
+        },
+        "as": "tr_g1_66"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Kopi",
+          "parent": {
+            "$ref": "tr_g1_66"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "gap": 8,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr1_67"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Kopi L",
+          "parent": {
+            "$ref": "tr_tr1_67"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 10,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr1l_68"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Badge K",
+          "parent": {
+            "$ref": "tr_tr1l_68"
+          },
+          "select": false,
+          "width": 38,
+          "height": 38,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F6E6E2",
+            "cornerRadius": 12,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_bdg_69"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "K",
+          "parent": {
+            "$ref": "tr_bdg_69"
+          },
+          "select": false,
+          "text": "K",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 13,
+            "fill": "#B8563F"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Kopi M",
+          "parent": {
+            "$ref": "tr_tr1l_68"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr1m_70"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Kopi Kenangan",
+          "parent": {
+            "$ref": "tr_tr1m_70"
+          },
+          "select": false,
+          "text": "Kopi Kenangan",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 13.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Makan & Minum • GoPay",
+          "parent": {
+            "$ref": "tr_tr1m_70"
+          },
+          "select": false,
+          "text": "Makan & Minum • GoPay",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Kopi R",
+          "parent": {
+            "$ref": "tr_tr1_67"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 8,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr1r_71"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Receipt Thumb",
+          "parent": {
+            "$ref": "tr_tr1r_71"
+          },
+          "select": false,
+          "width": 30,
+          "height": 34,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "gap": 3,
+            "padding": [
+              5,
+              5,
+              5,
+              5
+            ],
+            "fill": "#EFECE5",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 8,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_thmb_72"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "RL1",
+          "parent": {
+            "$ref": "tr_thmb_72"
+          },
+          "select": false,
+          "width": 18,
+          "height": 2,
+          "props": {
+            "fill": "#C7C2B6",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_73"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "RL2",
+          "parent": {
+            "$ref": "tr_thmb_72"
+          },
+          "select": false,
+          "width": 14,
+          "height": 2,
+          "props": {
+            "fill": "#C7C2B6",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_74"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "RL3",
+          "parent": {
+            "$ref": "tr_thmb_72"
+          },
+          "select": false,
+          "width": 16,
+          "height": 2,
+          "props": {
+            "fill": "#C7C2B6",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_75"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Kopi Amt",
+          "parent": {
+            "$ref": "tr_tr1r_71"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "crossAlign": "max",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr1a_76"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "-Rp 42.000",
+          "parent": {
+            "$ref": "tr_tr1a_76"
+          },
+          "select": false,
+          "text": "-Rp 42.000",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13.5,
+            "fill": "#B8563F",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "09:15",
+          "parent": {
+            "$ref": "tr_tr1a_76"
+          },
+          "select": false,
+          "text": "09:15",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 10.5,
+            "fill": "#8A8F98",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Divider",
+          "parent": {
+            "$ref": "tr_g1_66"
+          },
+          "select": false,
+          "height": 1,
+          "props": {
+            "fill": "#1A1D1F14",
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_r_77"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Setor",
+          "parent": {
+            "$ref": "tr_g1_66"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "gap": 8,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr2_78"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Setor L",
+          "parent": {
+            "$ref": "tr_tr2_78"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 10,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr2l_79"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Badge D",
+          "parent": {
+            "$ref": "tr_tr2l_79"
+          },
+          "select": false,
+          "width": 38,
+          "height": 38,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#E1EFE9",
+            "cornerRadius": 12,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_bdg_80"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "D",
+          "parent": {
+            "$ref": "tr_bdg_80"
+          },
+          "select": false,
+          "text": "D",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 13,
+            "fill": "#2A6B57"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Setor M",
+          "parent": {
+            "$ref": "tr_tr2l_79"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 3,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr2m_81"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Setor Dana Darurat",
+          "parent": {
+            "$ref": "tr_tr2m_81"
+          },
+          "select": false,
+          "text": "Setor Dana Darurat",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 13.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Setor Sub",
+          "parent": {
+            "$ref": "tr_tr2m_81"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 5,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr2s_82"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Tabungan • BCA",
+          "parent": {
+            "$ref": "tr_tr2s_82"
+          },
+          "select": false,
+          "text": "Tabungan • BCA",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Linked Savings Pill",
+          "parent": {
+            "$ref": "tr_tr2s_82"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "padding": [
+              2,
+              6,
+              2,
+              6
+            ],
+            "fill": "#E1EFE9",
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_lnkp_83"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Dana Darurat",
+          "parent": {
+            "$ref": "tr_lnkp_83"
+          },
+          "select": false,
+          "text": "Dana Darurat",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 9.5,
+            "fill": "#2A6B57"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Setor Amt",
+          "parent": {
+            "$ref": "tr_tr2_78"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "crossAlign": "max",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr2a_84"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "-Rp 1.500.000",
+          "parent": {
+            "$ref": "tr_tr2a_84"
+          },
+          "select": false,
+          "text": "-Rp 1.500.000",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13.5,
+            "fill": "#B8563F",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "08:00",
+          "parent": {
+            "$ref": "tr_tr2a_84"
+          },
+          "select": false,
+          "text": "08:00",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 10.5,
+            "fill": "#8A8F98",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Date Header 25 Nov",
+          "parent": {
+            "$ref": "tr_col_20"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              2,
+              2,
+              0,
+              2
+            ],
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_gh2_85"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "25 Nov 2026",
+          "parent": {
+            "$ref": "tr_gh2_85"
+          },
+          "select": false,
+          "text": "25 Nov 2026",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#16181A",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "1 transaksi",
+          "parent": {
+            "$ref": "tr_gh2_85"
+          },
+          "select": false,
+          "text": "1 transaksi",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Group 25 Nov Card",
+          "parent": {
+            "$ref": "tr_col_20"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 10,
+            "padding": [
+              12,
+              14,
+              12,
+              14
+            ],
+            "fill": "#FFFFFFAD",
+            "cornerRadius": 20,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "strokes": [
+              {
+                "type": "linearGradient",
+                "from": [
+                  0.5,
+                  0
+                ],
+                "to": [
+                  0.5,
+                  1
+                ],
+                "stops": [
+                  "#FFFFFFE6",
+                  "#1A1D1F14"
+                ]
+              }
+            ],
+            "strokeWeight": 0.75
+          }
+        },
+        "as": "tr_g2_86"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Gaji",
+          "parent": {
+            "$ref": "tr_g2_86"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "gap": 8,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr3_87"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Gaji L",
+          "parent": {
+            "$ref": "tr_tr3_87"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 10,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr3l_88"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Badge G",
+          "parent": {
+            "$ref": "tr_tr3l_88"
+          },
+          "select": false,
+          "width": 38,
+          "height": 38,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#E1EFE9",
+            "cornerRadius": 12,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_bdg_89"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "G",
+          "parent": {
+            "$ref": "tr_bdg_89"
+          },
+          "select": false,
+          "text": "G",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 13,
+            "fill": "#2A6B57"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Gaji M",
+          "parent": {
+            "$ref": "tr_tr3l_88"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr3m_90"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Gaji Bulanan",
+          "parent": {
+            "$ref": "tr_tr3m_90"
+          },
+          "select": false,
+          "text": "Gaji Bulanan",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 13.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Gaji • BCA",
+          "parent": {
+            "$ref": "tr_tr3m_90"
+          },
+          "select": false,
+          "text": "Gaji • BCA",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TX Gaji Amt",
+          "parent": {
+            "$ref": "tr_tr3_87"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "crossAlign": "max",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "tr_tr3a_91"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "+Rp 12.500.000",
+          "parent": {
+            "$ref": "tr_tr3a_91"
+          },
+          "select": false,
+          "text": "+Rp 12.500.000",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13.5,
+            "fill": "#2A6B57",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "07:30",
+          "parent": {
+            "$ref": "tr_tr3a_91"
+          },
+          "select": false,
+          "text": "07:30",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 10.5,
+            "fill": "#8A8F98",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Floating Liquid Dock",
+          "parent": 222,
+          "select": false,
+          "x": 20,
+          "y": 831,
+          "width": 372,
+          "height": 64,
+          "props": {
+            "layout": "horizontal",
+            "padding": 4,
+            "gap": 2,
+            "crossAlign": "center",
+            "fill": "#FFFFFFC4",
+            "cornerRadius": 999,
+            "sizingH": "fixed",
+            "sizingV": "fixed",
+            "strokes": [
+              {
+                "type": "linearGradient",
+                "from": [
+                  0.5,
+                  0
+                ],
+                "to": [
+                  0.5,
+                  1
+                ],
+                "stops": [
+                  "#FFFFFFE6",
+                  "#1A1D1F14"
+                ]
+              }
+            ],
+            "strokeWeight": 0.75
+          }
+        },
+        "as": "tr_dock_92"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab Beranda",
+          "parent": {
+            "$ref": "tr_dock_92"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "none",
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fill"
+          }
+        },
+        "as": "tr_tab_93"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon home",
+          "parent": {
+            "$ref": "tr_tab_93"
+          },
+          "select": false,
+          "width": 18,
+          "height": 18,
+          "props": {
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_ic_94"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "HomeBody",
+          "parent": {
+            "$ref": "tr_ic_94"
+          },
+          "select": false,
+          "x": 2.8,
+          "y": 7.3,
+          "width": 12.4,
+          "height": 8.4,
+          "props": {
+            "fill": "#5A5F66",
+            "cornerRadius": 2.2
+          }
+        },
+        "as": "tr_r_95"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "HomeRoof",
+          "parent": {
+            "$ref": "tr_ic_94"
+          },
+          "select": false,
+          "x": 5.1,
+          "y": 2.8,
+          "width": 7.9,
+          "height": 5.6,
+          "props": {
+            "fill": "#5A5F66",
+            "cornerRadius": 2.2
+          }
+        },
+        "as": "tr_r_96"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Beranda",
+          "parent": {
+            "$ref": "tr_tab_93"
+          },
+          "select": false,
+          "text": "Beranda",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5A5F66",
+            "letterSpacing": 0.2
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab Transaksi",
+          "parent": {
+            "$ref": "tr_dock_92"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "#1E4D451A",
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fill",
+            "stroke": "#1E4D452E",
+            "strokeWeight": 0.75
+          }
+        },
+        "as": "tr_tab_97"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon receipt",
+          "parent": {
+            "$ref": "tr_tab_97"
+          },
+          "select": false,
+          "width": 18,
+          "height": 18,
+          "props": {
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_ic_98"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "RecBody",
+          "parent": {
+            "$ref": "tr_ic_98"
+          },
+          "select": false,
+          "x": 3.4,
+          "y": 1.7,
+          "width": 11.2,
+          "height": 14.6,
+          "props": {
+            "fill": "none",
+            "stroke": "#1E4D45",
+            "strokeWeight": 1.6,
+            "cornerRadius": 2.8
+          }
+        },
+        "as": "tr_r_99"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "RecL1",
+          "parent": {
+            "$ref": "tr_ic_98"
+          },
+          "select": false,
+          "x": 6.2,
+          "y": 5.6,
+          "width": 5.6,
+          "height": 1.6,
+          "props": {
+            "fill": "#1E4D45",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_100"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "RecL2",
+          "parent": {
+            "$ref": "tr_ic_98"
+          },
+          "select": false,
+          "x": 6.2,
+          "y": 9.0,
+          "width": 5.6,
+          "height": 1.6,
+          "props": {
+            "fill": "#1E4D45",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_101"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "RecL3",
+          "parent": {
+            "$ref": "tr_ic_98"
+          },
+          "select": false,
+          "x": 6.2,
+          "y": 12.4,
+          "width": 3.4,
+          "height": 1.6,
+          "props": {
+            "fill": "#1E4D45",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_102"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Transaksi",
+          "parent": {
+            "$ref": "tr_tab_97"
+          },
+          "select": false,
+          "text": "Transaksi",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 10.5,
+            "fill": "#1E4D45",
+            "letterSpacing": 0.2
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab Nabung",
+          "parent": {
+            "$ref": "tr_dock_92"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "none",
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fill"
+          }
+        },
+        "as": "tr_tab_103"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon savings",
+          "parent": {
+            "$ref": "tr_tab_103"
+          },
+          "select": false,
+          "width": 18,
+          "height": 18,
+          "props": {
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_ic_104"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "SavCoin",
+          "parent": {
+            "$ref": "tr_ic_104"
+          },
+          "select": false,
+          "x": 2.2,
+          "y": 3.4,
+          "width": 13.5,
+          "height": 11.8,
+          "props": {
+            "fill": "none",
+            "stroke": "#5A5F66",
+            "strokeWeight": 1.6
+          }
+        },
+        "as": "tr_e_105"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "SavSlot",
+          "parent": {
+            "$ref": "tr_ic_104"
+          },
+          "select": false,
+          "x": 6.2,
+          "y": 7.3,
+          "width": 5.6,
+          "height": 1.8,
+          "props": {
+            "fill": "#5A5F66",
+            "cornerRadius": 1
+          }
+        },
+        "as": "tr_r_106"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "SavDot",
+          "parent": {
+            "$ref": "tr_ic_104"
+          },
+          "select": false,
+          "x": 7.9,
+          "y": 10.7,
+          "width": 2.2,
+          "height": 2.2,
+          "props": {
+            "fill": "#5A5F66"
+          }
+        },
+        "as": "tr_e_107"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Nabung",
+          "parent": {
+            "$ref": "tr_tab_103"
+          },
+          "select": false,
+          "text": "Nabung",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5A5F66",
+            "letterSpacing": 0.2
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab Pengaturan",
+          "parent": {
+            "$ref": "tr_dock_92"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "none",
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fill"
+          }
+        },
+        "as": "tr_tab_108"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon settings",
+          "parent": {
+            "$ref": "tr_tab_108"
+          },
+          "select": false,
+          "width": 18,
+          "height": 18,
+          "props": {
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "tr_ic_109"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "SetOuter",
+          "parent": {
+            "$ref": "tr_ic_109"
+          },
+          "select": false,
+          "x": 2.8,
+          "y": 2.8,
+          "width": 12.4,
+          "height": 12.4,
+          "props": {
+            "fill": "none",
+            "stroke": "#5A5F66",
+            "strokeWeight": 1.7
+          }
+        },
+        "as": "tr_e_110"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "SetInner",
+          "parent": {
+            "$ref": "tr_ic_109"
+          },
+          "select": false,
+          "x": 6.8,
+          "y": 6.8,
+          "width": 4.5,
+          "height": 4.5,
+          "props": {
+            "fill": "#5A5F66"
+          }
+        },
+        "as": "tr_e_111"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Pengaturan",
+          "parent": {
+            "$ref": "tr_tab_108"
+          },
+          "select": false,
+          "text": "Pengaturan",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5A5F66",
+            "letterSpacing": 0.2
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Home Indicator",
+          "parent": 222,
+          "select": false,
+          "x": 146,
+          "y": 904,
+          "width": 120,
+          "height": 4,
+          "props": {
+            "fill": "#16181A33",
+            "cornerRadius": 999
+          }
+        },
+        "as": "tr_hbar_112"
+      }
+    ]
+  }
+}

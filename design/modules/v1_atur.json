@@ -1,0 +1,2645 @@
+{
+  "command": "command.batch",
+  "params": {
+    "label": "V1 — Atur",
+    "commands": [
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Content",
+          "parent": 249,
+          "select": false,
+          "width": 412,
+          "x": 0,
+          "y": 0,
+          "props": {
+            "layout": "vertical",
+            "padding": [
+              24,
+              20,
+              110,
+              20
+            ],
+            "gap": 16,
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_1"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Header",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_2"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Atur",
+          "text": "Atur",
+          "parent": {
+            "$ref": "f_2"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 22,
+            "fill": "#1B2721",
+            "textAlign": "left",
+            "letterSpacing": -0.4
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "VersionPill",
+          "parent": {
+            "$ref": "f_2"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              4,
+              10,
+              4,
+              10
+            ],
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "#F7F8F3",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 12
+          }
+        },
+        "as": "f_3"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "V1.6.8 · Kertas",
+          "text": "V1.6.8 · Kertas",
+          "parent": {
+            "$ref": "f_3"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Group/Tampilan",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 0,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_4"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "SectionLabel",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "padding": [
+              0,
+              0,
+              6,
+              0
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_5"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "TAMPILAN",
+          "text": "TAMPILAN",
+          "parent": {
+            "$ref": "f_5"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#5C6A62",
+            "textAlign": "left",
+            "letterSpacing": 0.7
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B27211C",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Row/Tema & Kaca",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              11,
+              2,
+              11,
+              2
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_6"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Tema & Kaca",
+          "text": "Tema & Kaca",
+          "parent": {
+            "$ref": "f_6"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_6"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 8,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_7"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Kertas · Cobalt",
+          "text": "Kertas · Cobalt",
+          "parent": {
+            "$ref": "f_7"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/ChevRight",
+          "parent": {
+            "$ref": "f_7"
+          },
+          "select": false,
+          "width": 13,
+          "height": 13,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_8"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/ChevRight_p0",
+          "parent": {
+            "$ref": "f_8"
+          },
+          "path": "M5 3L9.5 7L5 11",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#6B7870",
+            "strokeWeight": 1.7,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B272110",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Row/Beranda",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              11,
+              2,
+              11,
+              2
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_9"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Beranda",
+          "text": "Beranda",
+          "parent": {
+            "$ref": "f_9"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_9"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 8,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_10"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Beranda Baru",
+          "text": "Beranda Baru",
+          "parent": {
+            "$ref": "f_10"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/ChevRight",
+          "parent": {
+            "$ref": "f_10"
+          },
+          "select": false,
+          "width": 13,
+          "height": 13,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_11"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/ChevRight_p0",
+          "parent": {
+            "$ref": "f_11"
+          },
+          "path": "M5 3L9.5 7L5 11",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#6B7870",
+            "strokeWeight": 1.7,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B272110",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Row/Grafik",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              11,
+              2,
+              11,
+              2
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_12"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Grafik",
+          "text": "Grafik",
+          "parent": {
+            "$ref": "f_12"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_12"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 8,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_13"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Batang 6 bulan",
+          "text": "Batang 6 bulan",
+          "parent": {
+            "$ref": "f_13"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/ChevRight",
+          "parent": {
+            "$ref": "f_13"
+          },
+          "select": false,
+          "width": 13,
+          "height": 13,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_14"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/ChevRight_p0",
+          "parent": {
+            "$ref": "f_14"
+          },
+          "path": "M5 3L9.5 7L5 11",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#6B7870",
+            "strokeWeight": 1.7,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B27211C",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Group/Keuangan",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 0,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_15"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "SectionLabel",
+          "parent": {
+            "$ref": "f_15"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "padding": [
+              0,
+              0,
+              6,
+              0
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_16"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "KEUANGAN",
+          "text": "KEUANGAN",
+          "parent": {
+            "$ref": "f_16"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#5C6A62",
+            "textAlign": "left",
+            "letterSpacing": 0.7
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_15"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B27211C",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Row/Sumber Dana",
+          "parent": {
+            "$ref": "f_15"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              11,
+              2,
+              11,
+              2
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_17"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Sumber Dana",
+          "text": "Sumber Dana",
+          "parent": {
+            "$ref": "f_17"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_17"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 8,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_18"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "3 akun aktif",
+          "text": "3 akun aktif",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/ChevRight",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "select": false,
+          "width": 13,
+          "height": 13,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_19"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/ChevRight_p0",
+          "parent": {
+            "$ref": "f_19"
+          },
+          "path": "M5 3L9.5 7L5 11",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#6B7870",
+            "strokeWeight": 1.7,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_15"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B272110",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Row/Kategori",
+          "parent": {
+            "$ref": "f_15"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              11,
+              2,
+              11,
+              2
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_20"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Kategori",
+          "text": "Kategori",
+          "parent": {
+            "$ref": "f_20"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_20"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 8,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_21"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "8 kategori",
+          "text": "8 kategori",
+          "parent": {
+            "$ref": "f_21"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/ChevRight",
+          "parent": {
+            "$ref": "f_21"
+          },
+          "select": false,
+          "width": 13,
+          "height": 13,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_22"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/ChevRight_p0",
+          "parent": {
+            "$ref": "f_22"
+          },
+          "path": "M5 3L9.5 7L5 11",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#6B7870",
+            "strokeWeight": 1.7,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_15"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B27211C",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Group/Otomatis & Pengingat",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 0,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_23"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "SectionLabel",
+          "parent": {
+            "$ref": "f_23"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "padding": [
+              0,
+              0,
+              6,
+              0
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_24"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "OTOMATIS & PENGINGAT",
+          "text": "OTOMATIS & PENGINGAT",
+          "parent": {
+            "$ref": "f_24"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#5C6A62",
+            "textAlign": "left",
+            "letterSpacing": 0.7
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_23"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B27211C",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Row/Notifikasi & Widget",
+          "parent": {
+            "$ref": "f_23"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              11,
+              2,
+              11,
+              2
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_25"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Notifikasi & Widget",
+          "text": "Notifikasi & Widget",
+          "parent": {
+            "$ref": "f_25"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_25"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 8,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_26"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Aktif · 10 aplikasi",
+          "text": "Aktif · 10 aplikasi",
+          "parent": {
+            "$ref": "f_26"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/ChevRight",
+          "parent": {
+            "$ref": "f_26"
+          },
+          "select": false,
+          "width": 13,
+          "height": 13,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_27"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/ChevRight_p0",
+          "parent": {
+            "$ref": "f_27"
+          },
+          "path": "M5 3L9.5 7L5 11",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#6B7870",
+            "strokeWeight": 1.7,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_23"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B27211C",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Group/Data & Cadangan",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 0,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_28"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "SectionLabel",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "padding": [
+              0,
+              0,
+              6,
+              0
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_29"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "DATA & CADANGAN",
+          "text": "DATA & CADANGAN",
+          "parent": {
+            "$ref": "f_29"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#5C6A62",
+            "textAlign": "left",
+            "letterSpacing": 0.7
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B27211C",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Row/Cadangan ZIP",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              11,
+              2,
+              11,
+              2
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_30"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Cadangan ZIP",
+          "text": "Cadangan ZIP",
+          "parent": {
+            "$ref": "f_30"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_30"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 8,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_31"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Ekspor & pulihkan",
+          "text": "Ekspor & pulihkan",
+          "parent": {
+            "$ref": "f_31"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/ChevRight",
+          "parent": {
+            "$ref": "f_31"
+          },
+          "select": false,
+          "width": 13,
+          "height": 13,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_32"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/ChevRight_p0",
+          "parent": {
+            "$ref": "f_32"
+          },
+          "path": "M5 3L9.5 7L5 11",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#6B7870",
+            "strokeWeight": 1.7,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B272110",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Row/Panduan Awal",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              11,
+              2,
+              11,
+              2
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_33"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Panduan Awal",
+          "text": "Panduan Awal",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 8,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_34"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Cara pakai Saku",
+          "text": "Cara pakai Saku",
+          "parent": {
+            "$ref": "f_34"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/ChevRight",
+          "parent": {
+            "$ref": "f_34"
+          },
+          "select": false,
+          "width": 13,
+          "height": 13,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_35"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/ChevRight_p0",
+          "parent": {
+            "$ref": "f_35"
+          },
+          "path": "M5 3L9.5 7L5 11",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#6B7870",
+            "strokeWeight": 1.7,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B272110",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Row/Hapus Data",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              11,
+              2,
+              11,
+              2
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_36"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Hapus Data",
+          "text": "Hapus Data",
+          "parent": {
+            "$ref": "f_36"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14,
+            "fill": "#A33A2B",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_36"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 8,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_37"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Reset buku kas",
+          "text": "Reset buku kas",
+          "parent": {
+            "$ref": "f_37"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/ChevRight",
+          "parent": {
+            "$ref": "f_37"
+          },
+          "select": false,
+          "width": 13,
+          "height": 13,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_38"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/ChevRight_p0",
+          "parent": {
+            "$ref": "f_38"
+          },
+          "path": "M5 3L9.5 7L5 11",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#6B7870",
+            "strokeWeight": 1.7,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B27211C",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "RingkasanData",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "padding": [
+              14,
+              16,
+              14,
+              16
+            ],
+            "gap": 8,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "#F7F8F3",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 18
+          }
+        },
+        "as": "f_39"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "RINGKASAN DATA",
+          "text": "RINGKASAN DATA",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#5C6A62",
+            "textAlign": "left",
+            "letterSpacing": 0.7
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B272110",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "KV/Total catatan",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_40"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Total catatan",
+          "text": "Total catatan",
+          "parent": {
+            "$ref": "f_40"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "6 transaksi",
+          "text": "6 transaksi",
+          "parent": {
+            "$ref": "f_40"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#1B2721",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "KV/Sumber dana",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_41"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Sumber dana",
+          "text": "Sumber dana",
+          "parent": {
+            "$ref": "f_41"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "3 akun aktif",
+          "text": "3 akun aktif",
+          "parent": {
+            "$ref": "f_41"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#1B2721",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "KV/Target nabung",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_42"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Target nabung",
+          "text": "Target nabung",
+          "parent": {
+            "$ref": "f_42"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "2 target impian",
+          "text": "2 target impian",
+          "parent": {
+            "$ref": "f_42"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#1B2721",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "KV/Ukuran arsip lokal",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_43"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Ukuran arsip lokal",
+          "text": "Ukuran arsip lokal",
+          "parent": {
+            "$ref": "f_43"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "142 KB",
+          "text": "142 KB",
+          "parent": {
+            "$ref": "f_43"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#1B2721",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "V1 Floating Dock",
+          "parent": 249,
+          "select": false,
+          "width": 372,
+          "height": 66,
+          "x": 20,
+          "y": 827,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              5,
+              6,
+              5,
+              6
+            ],
+            "gap": 2,
+            "fill": "#F7F8F3EC",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 33,
+            "effects": [
+              {
+                "type": "dropShadow",
+                "color": "#1B27211C",
+                "offset": [
+                  0,
+                  8
+                ],
+                "radius": 24
+              }
+            ]
+          }
+        },
+        "as": "f_44"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab/Home",
+          "parent": {
+            "$ref": "f_44"
+          },
+          "select": false,
+          "width": 70,
+          "height": 56,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "none",
+            "cornerRadius": 28
+          }
+        },
+        "as": "f_45"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Home",
+          "parent": {
+            "$ref": "f_45"
+          },
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_46"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Home_p0",
+          "parent": {
+            "$ref": "f_46"
+          },
+          "path": "M3 9.2L10 3.5L17 9.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Home_p1",
+          "parent": {
+            "$ref": "f_46"
+          },
+          "path": "M5 8.2V16.5H15V8.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Home_p2",
+          "parent": {
+            "$ref": "f_46"
+          },
+          "path": "M8.5 16.5V12.2H11.5V16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Home",
+          "text": "Home",
+          "parent": {
+            "$ref": "f_45"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5C6A62",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab/Transaksi",
+          "parent": {
+            "$ref": "f_44"
+          },
+          "select": false,
+          "width": 70,
+          "height": 56,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "none",
+            "cornerRadius": 28
+          }
+        },
+        "as": "f_47"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Receipt",
+          "parent": {
+            "$ref": "f_47"
+          },
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_48"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Receipt_p0",
+          "parent": {
+            "$ref": "f_48"
+          },
+          "path": "M5 3.5H15V16.5L13 15.2L11 16.5L9 15.2L7 16.5L5 15.2V3.5Z",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Receipt_p1",
+          "parent": {
+            "$ref": "f_48"
+          },
+          "path": "M7.8 7.5H12.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Receipt_p2",
+          "parent": {
+            "$ref": "f_48"
+          },
+          "path": "M7.8 10.5H12.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Transaksi",
+          "text": "Transaksi",
+          "parent": {
+            "$ref": "f_47"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5C6A62",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "CenterFAB",
+          "parent": {
+            "$ref": "f_44"
+          },
+          "select": false,
+          "width": 52,
+          "height": 52,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#23418F",
+            "cornerRadius": 26,
+            "effects": [
+              {
+                "type": "dropShadow",
+                "color": "#23418F40",
+                "offset": [
+                  0,
+                  4
+                ],
+                "radius": 12
+              }
+            ]
+          }
+        },
+        "as": "f_49"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Plus",
+          "parent": {
+            "$ref": "f_49"
+          },
+          "select": false,
+          "width": 22,
+          "height": 22,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_50"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Plus_p0",
+          "parent": {
+            "$ref": "f_50"
+          },
+          "path": "M11.0 4.8L11.0 17.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#FFFFFF",
+            "strokeWeight": 2.1,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Plus_p1",
+          "parent": {
+            "$ref": "f_50"
+          },
+          "path": "M4.8 11.0L17.2 11.0",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#FFFFFF",
+            "strokeWeight": 2.1,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab/Nabung",
+          "parent": {
+            "$ref": "f_44"
+          },
+          "select": false,
+          "width": 70,
+          "height": 56,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "none",
+            "cornerRadius": 28
+          }
+        },
+        "as": "f_51"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Wallet",
+          "parent": {
+            "$ref": "f_51"
+          },
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_52"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Wallet_p0",
+          "parent": {
+            "$ref": "f_52"
+          },
+          "path": "M3.5 6.5H16.5V15.5H3.5V6.5Z",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Wallet_p1",
+          "parent": {
+            "$ref": "f_52"
+          },
+          "path": "M5.5 6.5V5.2C5.5 4.5 6.1 4 6.8 4H13.2C13.9 4 14.5 4.5 14.5 5.2V6.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Wallet_p2",
+          "parent": {
+            "$ref": "f_52"
+          },
+          "path": "M3.5 10H16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Nabung",
+          "text": "Nabung",
+          "parent": {
+            "$ref": "f_51"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5C6A62",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab/Setting",
+          "parent": {
+            "$ref": "f_44"
+          },
+          "select": false,
+          "width": 70,
+          "height": 56,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "#23418F1A",
+            "cornerRadius": 28
+          }
+        },
+        "as": "f_53"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Sliders",
+          "parent": {
+            "$ref": "f_53"
+          },
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_54"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p0",
+          "parent": {
+            "$ref": "f_54"
+          },
+          "path": "M3.5 6H16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p1",
+          "parent": {
+            "$ref": "f_54"
+          },
+          "path": "M3.5 10H16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p2",
+          "parent": {
+            "$ref": "f_54"
+          },
+          "path": "M3.5 14H16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p3",
+          "parent": {
+            "$ref": "f_54"
+          },
+          "path": "M7 4.5V7.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p4",
+          "parent": {
+            "$ref": "f_54"
+          },
+          "path": "M13 8.5V11.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p5",
+          "parent": {
+            "$ref": "f_54"
+          },
+          "path": "M8.5 12.5V15.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Setting",
+          "text": "Setting",
+          "parent": {
+            "$ref": "f_53"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 10.5,
+            "fill": "#23418F",
+            "textAlign": "center"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,2908 @@
+{
+  "command": "command.batch",
+  "params": {
+    "label": "V2 — Nabung",
+    "commands": [
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Aurora Canvas",
+          "parent": 223,
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 412,
+          "height": 915,
+          "props": {
+            "clip": true,
+            "fills": [
+              {
+                "type": "linearGradient",
+                "from": [
+                  0.5,
+                  0.0
+                ],
+                "to": [
+                  0.5,
+                  1.0
+                ],
+                "stops": [
+                  "#F5F3EE",
+                  "#EDEAE3",
+                  "#E6EBE7"
+                ]
+              }
+            ]
+          }
+        },
+        "as": "bg_1"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Aurora Pool Sage",
+          "parent": {
+            "$ref": "bg_1"
+          },
+          "x": -85,
+          "y": -25,
+          "select": false,
+          "width": 310,
+          "height": 310,
+          "props": {
+            "fills": [
+              {
+                "type": "radialGradient",
+                "stops": [
+                  "#C6DCD199",
+                  "#D8E4DE55",
+                  "#D8E4DE00"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Aurora Pool Limestone",
+          "parent": {
+            "$ref": "bg_1"
+          },
+          "x": 215,
+          "y": 235,
+          "select": false,
+          "width": 290,
+          "height": 290,
+          "props": {
+            "fills": [
+              {
+                "type": "radialGradient",
+                "stops": [
+                  "#E6D5C090",
+                  "#EAE0D34C",
+                  "#EAE0D300"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Aurora Pool Slate",
+          "parent": {
+            "$ref": "bg_1"
+          },
+          "x": -60,
+          "y": 585,
+          "select": false,
+          "width": 320,
+          "height": 320,
+          "props": {
+            "fills": [
+              {
+                "type": "radialGradient",
+                "stops": [
+                  "#CEDAE888",
+                  "#DCE3EC44",
+                  "#DCE3EC00"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Status Bar",
+          "parent": 223,
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 412,
+          "height": 44,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              12,
+              24,
+              6,
+              24
+            ],
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "sb_2"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Time",
+          "parent": {
+            "$ref": "sb_2"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "09:41",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14,
+            "fill": "#16181A",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Status Icons",
+          "parent": {
+            "$ref": "sb_2"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 7,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "sbi_3"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Signal",
+          "parent": {
+            "$ref": "sbi_3"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "max",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "sig_4"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Bar 1",
+          "parent": {
+            "$ref": "sig_4"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 2.5,
+          "height": 4,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Bar 2",
+          "parent": {
+            "$ref": "sig_4"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 2.5,
+          "height": 6,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Bar 3",
+          "parent": {
+            "$ref": "sig_4"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 2.5,
+          "height": 8,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Bar 4",
+          "parent": {
+            "$ref": "sig_4"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 2.5,
+          "height": 10,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "WiFi",
+          "parent": {
+            "$ref": "sbi_3"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 14,
+          "height": 11,
+          "props": {
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "wf_5"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "WiFi Arc Outer",
+          "parent": {
+            "$ref": "wf_5"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 14,
+          "height": 14,
+          "props": {
+            "fill": "none",
+            "stroke": "#16181A",
+            "strokeWeight": 1.5
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "WiFi Mask Bottom",
+          "parent": {
+            "$ref": "wf_5"
+          },
+          "x": 0,
+          "y": 5,
+          "select": false,
+          "width": 14,
+          "height": 7,
+          "props": {
+            "fill": "#F2F0EA"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "WiFi Dot",
+          "parent": {
+            "$ref": "wf_5"
+          },
+          "x": 5.25,
+          "y": 7.5,
+          "select": false,
+          "width": 3.5,
+          "height": 3.5,
+          "props": {
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Battery",
+          "parent": {
+            "$ref": "sbi_3"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 1.5,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "bat_6"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Battery Body",
+          "parent": {
+            "$ref": "bat_6"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 22,
+          "height": 11,
+          "props": {
+            "fill": "none",
+            "stroke": "#16181A",
+            "strokeWeight": 1.2,
+            "cornerRadius": 3.5,
+            "padding": 2,
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "batb_7"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Battery Level",
+          "parent": {
+            "$ref": "batb_7"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 14,
+          "height": 7,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1.5
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Battery Cap",
+          "parent": {
+            "$ref": "bat_6"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 2,
+          "height": 4.5,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Content Stack",
+          "parent": 223,
+          "x": 20,
+          "y": 52,
+          "select": false,
+          "width": 372,
+          "props": {
+            "layout": "vertical",
+            "gap": 12,
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "hug"
+          }
+        },
+        "as": "root_8"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Header",
+          "parent": {
+            "$ref": "root_8"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "hdr_9"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Header Titles",
+          "parent": {
+            "$ref": "hdr_9"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "hdrl_10"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Title",
+          "parent": {
+            "$ref": "hdrl_10"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Nabung",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 24,
+            "fill": "#16181A",
+            "letterSpacing": -0.4
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Subtitle",
+          "parent": {
+            "$ref": "hdrl_10"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Target tabungan & alokasi impian",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Btn Target Baru",
+          "parent": {
+            "$ref": "hdr_9"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "height": 40,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              14,
+              0,
+              14
+            ],
+            "fill": "#1E4D45",
+            "stroke": "#FFFFFF33",
+            "strokeWeight": 0.75,
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "btn_11"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Btn Label",
+          "parent": {
+            "$ref": "btn_11"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "+ Target Baru",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Hero Tabungan Card",
+          "parent": {
+            "$ref": "root_8"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 11,
+            "padding": [
+              16,
+              18,
+              16,
+              18
+            ],
+            "fill": "#FFFFFFB8",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 1,
+            "cornerRadius": 26,
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "hero_12"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Hero Top Row",
+          "parent": {
+            "$ref": "hero_12"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "htop_13"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Eyebrow",
+          "parent": {
+            "$ref": "htop_13"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "TOTAL TABUNGAN",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#5A5F66",
+            "letterSpacing": 0.7
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Pct Pill",
+          "parent": {
+            "$ref": "htop_13"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              4,
+              10,
+              4,
+              10
+            ],
+            "fill": "#E1EFE9",
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "pill_14"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Pct Text",
+          "parent": {
+            "$ref": "pill_14"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "49% tercapai",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#2A6B57",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Hero Amount Block",
+          "parent": {
+            "$ref": "hero_12"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "hamt_15"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Total Saved",
+          "parent": {
+            "$ref": "hamt_15"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Rp 17.000.000",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 28,
+            "fill": "#16181A",
+            "features": {
+              "tnum": true
+            },
+            "letterSpacing": -0.5
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Total Target",
+          "parent": {
+            "$ref": "hamt_15"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "dari total target Rp 35.000.000",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Hero Progress Track",
+          "parent": {
+            "$ref": "hero_12"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "height": 8,
+          "props": {
+            "fill": "#1A1D1F14",
+            "cornerRadius": 999,
+            "clip": true,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "pbar_16"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hero Progress Fill",
+          "parent": {
+            "$ref": "pbar_16"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 165,
+          "height": 8,
+          "props": {
+            "fill": "#2A6B57",
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Hero Stats Row",
+          "parent": {
+            "$ref": "hero_12"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "srow_17"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Stat Aktif",
+          "parent": {
+            "$ref": "srow_17"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              9,
+              12,
+              9,
+              12
+            ],
+            "fill": "#E2EDE9",
+            "cornerRadius": 14,
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "st_18"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Label",
+          "parent": {
+            "$ref": "st_18"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Aktif",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Value",
+          "parent": {
+            "$ref": "st_18"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "2 target",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13,
+            "fill": "#1E4D45",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Stat Tercapai",
+          "parent": {
+            "$ref": "srow_17"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              9,
+              12,
+              9,
+              12
+            ],
+            "fill": "#E1EFE9",
+            "cornerRadius": 14,
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "st_19"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Label",
+          "parent": {
+            "$ref": "st_19"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Tercapai",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Value",
+          "parent": {
+            "$ref": "st_19"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "0 target",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13,
+            "fill": "#2A6B57",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal Card Dana Darurat",
+          "parent": {
+            "$ref": "root_8"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 0,
+            "fill": "#FFFFFFB8",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 1,
+            "cornerRadius": 24,
+            "clip": true,
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g1_20"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 1 Header Band",
+          "parent": {
+            "$ref": "g1_20"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              12,
+              16,
+              12,
+              16
+            ],
+            "fills": [
+              {
+                "type": "linearGradient",
+                "from": [
+                  0.0,
+                  0.5
+                ],
+                "to": [
+                  1.0,
+                  0.5
+                ],
+                "stops": [
+                  "#E2EDE9B3",
+                  "#E1EFE933"
+                ]
+              }
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g1b_21"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 1 Left",
+          "parent": {
+            "$ref": "g1b_21"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 10,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g1l_22"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Badge D",
+          "parent": {
+            "$ref": "g1l_22"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 36,
+          "height": 36,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#1E4D45",
+            "cornerRadius": 11,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "bdg_23"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Badge Glyph",
+          "parent": {
+            "$ref": "bdg_23"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "D",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 16,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 1 Titles",
+          "parent": {
+            "$ref": "g1l_22"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g1t_24"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Goal Name",
+          "parent": {
+            "$ref": "g1t_24"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Dana Darurat",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 15.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Goal Deadline",
+          "parent": {
+            "$ref": "g1t_24"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "34 hari lagi • 31 Des 2026",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 1 Pct",
+          "parent": {
+            "$ref": "g1b_21"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "padding": [
+              4,
+              10,
+              4,
+              10
+            ],
+            "fill": "#E1EFE9",
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g1p_25"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Pct",
+          "parent": {
+            "$ref": "g1p_25"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "63%",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12,
+            "fill": "#2A6B57",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 1 Body",
+          "parent": {
+            "$ref": "g1_20"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 9,
+            "padding": [
+              12,
+              16,
+              14,
+              16
+            ],
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g1bd_26"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 1 Amounts",
+          "parent": {
+            "$ref": "g1bd_26"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "baseline",
+            "gap": 6,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g1a_27"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Saved",
+          "parent": {
+            "$ref": "g1a_27"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Rp 12.500.000",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 18,
+            "fill": "#16181A",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Target",
+          "parent": {
+            "$ref": "g1a_27"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "/ Rp 20.000.000",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 1 Track",
+          "parent": {
+            "$ref": "g1bd_26"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "height": 7,
+          "props": {
+            "fill": "#1A1D1F14",
+            "cornerRadius": 999,
+            "clip": true,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "g1tr_28"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Goal 1 Fill",
+          "parent": {
+            "$ref": "g1tr_28"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 214,
+          "height": 7,
+          "props": {
+            "fill": "#1E4D45",
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 1 Meta",
+          "parent": {
+            "$ref": "g1bd_26"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g1m_29"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Remaining",
+          "parent": {
+            "$ref": "g1m_29"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Kurang Rp 7.500.000",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#8A8F98",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Priority Chip",
+          "parent": {
+            "$ref": "g1m_29"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "padding": [
+              3,
+              8,
+              3,
+              8
+            ],
+            "fill": "#E2EDE9",
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g1c_30"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Chip Text",
+          "parent": {
+            "$ref": "g1c_30"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Prioritas",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#1E4D45"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 1 Actions",
+          "parent": {
+            "$ref": "g1bd_26"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g1bt_31"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Btn Setor",
+          "parent": {
+            "$ref": "g1bt_31"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "height": 38,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#2A6B57",
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "bset_32"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Setor Label",
+          "parent": {
+            "$ref": "bset_32"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "↓ Setor",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Btn Tarik",
+          "parent": {
+            "$ref": "g1bt_31"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "height": 38,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#FFFFFFCC",
+            "stroke": "#1A1D1F18",
+            "strokeWeight": 1,
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "btar_33"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Tarik Label",
+          "parent": {
+            "$ref": "btar_33"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "↑ Tarik",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal Card Liburan Kyoto",
+          "parent": {
+            "$ref": "root_8"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 0,
+            "fill": "#FFFFFFB8",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 1,
+            "cornerRadius": 24,
+            "clip": true,
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g2_34"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 2 Cover Band",
+          "parent": {
+            "$ref": "g2_34"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 372,
+          "height": 76,
+          "props": {
+            "clip": true,
+            "sizingH": "fill",
+            "sizingV": "fixed",
+            "fills": [
+              {
+                "type": "linearGradient",
+                "from": [
+                  0.0,
+                  0.0
+                ],
+                "to": [
+                  1.0,
+                  1.0
+                ],
+                "stops": [
+                  "#2C3E57",
+                  "#4E456B",
+                  "#A15241"
+                ]
+              }
+            ]
+          }
+        },
+        "as": "g2cv_35"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Sun Glow",
+          "parent": {
+            "$ref": "g2cv_35"
+          },
+          "x": 284,
+          "y": -8,
+          "select": false,
+          "width": 54,
+          "height": 54,
+          "props": {
+            "fill": "#F4D6B844"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Hill Back",
+          "parent": {
+            "$ref": "g2cv_35"
+          },
+          "x": 170,
+          "y": 42,
+          "select": false,
+          "width": 220,
+          "height": 90,
+          "props": {
+            "fill": "#1A223355"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Hill Front",
+          "parent": {
+            "$ref": "g2cv_35"
+          },
+          "x": -20,
+          "y": 50,
+          "select": false,
+          "width": 240,
+          "height": 80,
+          "props": {
+            "fill": "#12182666"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Cover Content",
+          "parent": {
+            "$ref": "g2cv_35"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 372,
+          "height": 76,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "max",
+            "padding": [
+              10,
+              16,
+              12,
+              16
+            ],
+            "fills": [
+              {
+                "type": "linearGradient",
+                "from": [
+                  0.5,
+                  0.0
+                ],
+                "to": [
+                  0.5,
+                  1.0
+                ],
+                "stops": [
+                  "#00000018",
+                  "#00000066"
+                ]
+              }
+            ],
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "g2ov_36"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 2 Left",
+          "parent": {
+            "$ref": "g2ov_36"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 10,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g2l_37"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Badge K",
+          "parent": {
+            "$ref": "g2l_37"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 34,
+          "height": 34,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#FFFFFF2E",
+            "cornerRadius": 10,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "bdg_38"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Badge Glyph",
+          "parent": {
+            "$ref": "bdg_38"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "K",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 15,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 2 Titles",
+          "parent": {
+            "$ref": "g2l_37"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g2t_39"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Goal Name",
+          "parent": {
+            "$ref": "g2t_39"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Liburan Kyoto",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 15.5,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Goal Target Date",
+          "parent": {
+            "$ref": "g2t_39"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Target Okt 2027 • Foto Sampul",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11,
+            "fill": "#FAF9F6CC"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 2 Pct",
+          "parent": {
+            "$ref": "g2ov_36"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "padding": [
+              4,
+              10,
+              4,
+              10
+            ],
+            "fill": "#FFFFFF33",
+            "stroke": "#FFFFFF44",
+            "strokeWeight": 0.75,
+            "cornerRadius": 999,
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g2p_40"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Pct",
+          "parent": {
+            "$ref": "g2p_40"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "30%",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12,
+            "fill": "#FAF9F6",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 2 Body",
+          "parent": {
+            "$ref": "g2_34"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 9,
+            "padding": [
+              12,
+              16,
+              14,
+              16
+            ],
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g2bd_41"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 2 Amounts",
+          "parent": {
+            "$ref": "g2bd_41"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "baseline",
+            "gap": 6,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g2a_42"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Saved",
+          "parent": {
+            "$ref": "g2a_42"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Rp 4.500.000",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 17.5,
+            "fill": "#16181A",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Target",
+          "parent": {
+            "$ref": "g2a_42"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "/ Rp 15.000.000",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 2 Track",
+          "parent": {
+            "$ref": "g2bd_41"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "height": 7,
+          "props": {
+            "fill": "#1A1D1F14",
+            "cornerRadius": 999,
+            "clip": true,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "g2tr_43"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Goal 2 Fill",
+          "parent": {
+            "$ref": "g2tr_43"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 102,
+          "height": 7,
+          "props": {
+            "fill": "#3D5473",
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Remaining",
+          "parent": {
+            "$ref": "g2bd_41"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Kurang Rp 10.500.000",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#8A8F98",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Goal 2 Actions",
+          "parent": {
+            "$ref": "g2bd_41"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "g2bt_44"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Btn Setor 2",
+          "parent": {
+            "$ref": "g2bt_44"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "height": 36,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#2A6B57",
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "bset2_45"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Setor Label",
+          "parent": {
+            "$ref": "bset2_45"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "↓ Setor",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Btn Tarik 2",
+          "parent": {
+            "$ref": "g2bt_44"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "height": 36,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#FFFFFFCC",
+            "stroke": "#1A1D1F18",
+            "strokeWeight": 1,
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "btar2_46"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Tarik Label",
+          "parent": {
+            "$ref": "btar2_46"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "↑ Tarik",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Ledger Sync Footnote",
+          "parent": {
+            "$ref": "root_8"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 10,
+            "padding": [
+              10,
+              14,
+              10,
+              14
+            ],
+            "fill": "#FFFFFFA6",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 1,
+            "cornerRadius": 18,
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "foot_47"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Badge i",
+          "parent": {
+            "$ref": "foot_47"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 30,
+          "height": 30,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#E6ECF3",
+            "cornerRadius": 9,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "bdg_48"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Badge Glyph",
+          "parent": {
+            "$ref": "bdg_48"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "i",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 13,
+            "fill": "#3D5473"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Footnote Copy",
+          "parent": {
+            "$ref": "foot_47"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 1,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        },
+        "as": "ftxt_49"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Footnote Title",
+          "parent": {
+            "$ref": "ftxt_49"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Sinkronisasi Otomatis ke Ledger",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Footnote Body",
+          "parent": {
+            "$ref": "ftxt_49"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Setiap setor & tarik tercatat otomatis di transaksi.",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Floating Liquid Dock",
+          "parent": 223,
+          "x": 20,
+          "y": 831,
+          "select": false,
+          "width": 372,
+          "height": 64,
+          "props": {
+            "layout": "horizontal",
+            "padding": 4,
+            "gap": 2,
+            "crossAlign": "center",
+            "fill": "#FFFFFFCC",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 1,
+            "cornerRadius": 999,
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "dock_50"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab Beranda",
+          "parent": {
+            "$ref": "dock_50"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fill",
+            "fill": "none"
+          }
+        },
+        "as": "tab_51"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon Beranda",
+          "parent": {
+            "$ref": "tab_51"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "ico_52"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Roof",
+          "parent": {
+            "$ref": "ico_52"
+          },
+          "x": 4,
+          "y": 4,
+          "select": false,
+          "width": 12,
+          "height": 2.2,
+          "props": {
+            "fill": "#5A5F66",
+            "cornerRadius": 1.1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Body",
+          "parent": {
+            "$ref": "ico_52"
+          },
+          "x": 3,
+          "y": 7,
+          "select": false,
+          "width": 14,
+          "height": 11,
+          "props": {
+            "fill": "none",
+            "stroke": "#5A5F66",
+            "strokeWeight": 1.8,
+            "cornerRadius": 3
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Door",
+          "parent": {
+            "$ref": "ico_52"
+          },
+          "x": 8,
+          "y": 13,
+          "select": false,
+          "width": 4,
+          "height": 5,
+          "props": {
+            "fill": "#5A5F66",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Label Beranda",
+          "parent": {
+            "$ref": "tab_51"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Beranda",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab Transaksi",
+          "parent": {
+            "$ref": "dock_50"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fill",
+            "fill": "none"
+          }
+        },
+        "as": "tab_53"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon Transaksi",
+          "parent": {
+            "$ref": "tab_53"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "ico_54"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Card",
+          "parent": {
+            "$ref": "ico_54"
+          },
+          "x": 3,
+          "y": 2,
+          "select": false,
+          "width": 14,
+          "height": 16,
+          "props": {
+            "fill": "none",
+            "stroke": "#5A5F66",
+            "strokeWeight": 1.8,
+            "cornerRadius": 3.5
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Line 1",
+          "parent": {
+            "$ref": "ico_54"
+          },
+          "x": 6,
+          "y": 6,
+          "select": false,
+          "width": 8,
+          "height": 1.8,
+          "props": {
+            "fill": "#5A5F66",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Line 2",
+          "parent": {
+            "$ref": "ico_54"
+          },
+          "x": 6,
+          "y": 10,
+          "select": false,
+          "width": 6,
+          "height": 1.8,
+          "props": {
+            "fill": "#5A5F66",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Line 3",
+          "parent": {
+            "$ref": "ico_54"
+          },
+          "x": 6,
+          "y": 14,
+          "select": false,
+          "width": 8,
+          "height": 1.8,
+          "props": {
+            "fill": "#5A5F66",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Label Transaksi",
+          "parent": {
+            "$ref": "tab_53"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Transaksi",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab Nabung",
+          "parent": {
+            "$ref": "dock_50"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fill",
+            "fill": "#1E4D451A",
+            "stroke": "#1E4D4524",
+            "strokeWeight": 0.75
+          }
+        },
+        "as": "tab_55"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon Nabung",
+          "parent": {
+            "$ref": "tab_55"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "ico_56"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Outer",
+          "parent": {
+            "$ref": "ico_56"
+          },
+          "x": 2,
+          "y": 2,
+          "select": false,
+          "width": 16,
+          "height": 16,
+          "props": {
+            "fill": "none",
+            "stroke": "#1E4D45",
+            "strokeWeight": 1.8
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Inner",
+          "parent": {
+            "$ref": "ico_56"
+          },
+          "x": 6.5,
+          "y": 6.5,
+          "select": false,
+          "width": 7,
+          "height": 7,
+          "props": {
+            "fill": "#1E4D45"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Label Nabung",
+          "parent": {
+            "$ref": "tab_55"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Nabung",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 10.5,
+            "fill": "#1E4D45"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab Pengaturan",
+          "parent": {
+            "$ref": "dock_50"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "cornerRadius": 999,
+            "sizingH": "fill",
+            "sizingV": "fill",
+            "fill": "none"
+          }
+        },
+        "as": "tab_57"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon Pengaturan",
+          "parent": {
+            "$ref": "tab_57"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "sizingH": "fixed",
+            "sizingV": "fixed"
+          }
+        },
+        "as": "ico_58"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Track 1",
+          "parent": {
+            "$ref": "ico_58"
+          },
+          "x": 3,
+          "y": 5.5,
+          "select": false,
+          "width": 14,
+          "height": 1.8,
+          "props": {
+            "fill": "#5A5F66",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Knob 1",
+          "parent": {
+            "$ref": "ico_58"
+          },
+          "x": 5,
+          "y": 4,
+          "select": false,
+          "width": 5,
+          "height": 5,
+          "props": {
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Track 2",
+          "parent": {
+            "$ref": "ico_58"
+          },
+          "x": 3,
+          "y": 12.5,
+          "select": false,
+          "width": 14,
+          "height": 1.8,
+          "props": {
+            "fill": "#5A5F66",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "ellipse",
+          "name": "Knob 2",
+          "parent": {
+            "$ref": "ico_58"
+          },
+          "x": 11,
+          "y": 11,
+          "select": false,
+          "width": 5,
+          "height": 5,
+          "props": {
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Label Pengaturan",
+          "parent": {
+            "$ref": "tab_57"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "text": "Pengaturan",
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Gesture Bar",
+          "parent": 223,
+          "x": 139,
+          "y": 904,
+          "select": false,
+          "width": 134,
+          "height": 4,
+          "props": {
+            "fill": "#16181A33",
+            "cornerRadius": 999
+          }
+        }
+      }
+    ]
+  }
+}
