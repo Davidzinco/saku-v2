@@ -1,0 +1,2679 @@
+{
+  "command": "command.batch",
+  "params": {
+    "label": "V2 — Sheet: Kelola Dompet & Kategori",
+    "commands": [
+      {
+        "command": "node.create",
+        "as": "f_1",
+        "params": {
+          "type": "frame",
+          "name": "Background Peek",
+          "parent": 228,
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "select": false,
+          "props": {
+            "fill": "#F5F3EE",
+            "clip": true
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_2",
+        "params": {
+          "type": "ellipse",
+          "name": "Aurora Sage",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "x": -40,
+          "y": -30,
+          "width": 260,
+          "height": 260,
+          "select": false,
+          "props": {
+            "fill": "#D8E4DE6B"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_3",
+        "params": {
+          "type": "ellipse",
+          "name": "Aurora Limestone",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "x": 230,
+          "y": 40,
+          "width": 240,
+          "height": 240,
+          "select": false,
+          "props": {
+            "fill": "#EAE0D361"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_4",
+        "params": {
+          "type": "frame",
+          "name": "Status Bar",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "x": 20,
+          "y": 12,
+          "width": 372,
+          "height": 22,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_5",
+        "params": {
+          "type": "text",
+          "text": "09:41",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12,
+            "fill": "#16181A",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_6",
+        "params": {
+          "type": "frame",
+          "name": "Status Icons",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 56,
+          "height": 14,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 5,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_7",
+        "params": {
+          "type": "rectangle",
+          "name": "Signal",
+          "parent": {
+            "$ref": "f_6"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 12,
+          "height": 8,
+          "select": false,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 2
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_8",
+        "params": {
+          "type": "rectangle",
+          "name": "Wifi",
+          "parent": {
+            "$ref": "f_6"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 8,
+          "select": false,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 2
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_9",
+        "params": {
+          "type": "rectangle",
+          "name": "Battery",
+          "parent": {
+            "$ref": "f_6"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 10,
+          "select": false,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 3
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_10",
+        "params": {
+          "type": "frame",
+          "name": "Peek App Header",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "x": 20,
+          "y": 40,
+          "width": 372,
+          "height": 48,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_11",
+        "params": {
+          "type": "frame",
+          "name": "Peek Title Col",
+          "parent": {
+            "$ref": "f_10"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 220,
+          "height": 44,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_12",
+        "params": {
+          "type": "text",
+          "text": "Pengaturan",
+          "parent": {
+            "$ref": "f_11"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Extra Bold",
+            "fontSize": 22,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_13",
+        "params": {
+          "type": "text",
+          "text": "Tampilan, Quick-Log, dan cadangan data",
+          "parent": {
+            "$ref": "f_11"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_14",
+        "params": {
+          "type": "frame",
+          "name": "Peek Pill",
+          "parent": {
+            "$ref": "f_10"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 96,
+          "height": 30,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 6,
+            "padding": [
+              0,
+              12,
+              0,
+              12
+            ],
+            "fill": "#FFFFFFD6",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 999,
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_15",
+        "params": {
+          "type": "ellipse",
+          "name": "Pill Dot",
+          "parent": {
+            "$ref": "f_14"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 7,
+          "height": 7,
+          "select": false,
+          "props": {
+            "fill": "#2A6B57"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_16",
+        "params": {
+          "type": "text",
+          "text": "Drive Aktif",
+          "parent": {
+            "$ref": "f_14"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_17",
+        "params": {
+          "type": "rectangle",
+          "name": "Modal Scrim",
+          "parent": 228,
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "select": false,
+          "props": {
+            "fill": "#14191844"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_18",
+        "params": {
+          "type": "frame",
+          "name": "Bottom Sheet",
+          "parent": 228,
+          "x": 0,
+          "y": 96,
+          "width": 412,
+          "height": 847,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 12,
+            "padding": [
+              10,
+              20,
+              44,
+              20
+            ],
+            "fill": "#FAF9F6",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 28,
+            "clip": true
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_19",
+        "params": {
+          "type": "frame",
+          "name": "Drag Handle Row",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 8,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_20",
+        "params": {
+          "type": "rectangle",
+          "name": "Drag Handle",
+          "parent": {
+            "$ref": "f_19"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 36,
+          "height": 4,
+          "select": false,
+          "props": {
+            "fill": "#1A1D1F29",
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_21",
+        "params": {
+          "type": "frame",
+          "name": "Sheet Header",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 44,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_22",
+        "params": {
+          "type": "frame",
+          "name": "Header Left",
+          "parent": {
+            "$ref": "f_21"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 310,
+          "height": 42,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_23",
+        "params": {
+          "type": "text",
+          "text": "Kelola Dompet & Kategori",
+          "parent": {
+            "$ref": "f_22"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 19,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_24",
+        "params": {
+          "type": "text",
+          "text": "3 akun aktif • 0 diarsipkan • 11 kategori",
+          "parent": {
+            "$ref": "f_22"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_25",
+        "params": {
+          "type": "frame",
+          "name": "Close Button",
+          "parent": {
+            "$ref": "f_21"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#EDEAE3",
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_26",
+        "params": {
+          "type": "text",
+          "text": "×",
+          "parent": {
+            "$ref": "f_25"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 18,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_27",
+        "params": {
+          "type": "frame",
+          "name": "Management Tabs",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 42,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 4,
+            "padding": 4,
+            "fill": "#EDEAE3",
+            "cornerRadius": 16,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_28",
+        "params": {
+          "type": "frame",
+          "name": "Tab Sumber Dana (3)",
+          "parent": {
+            "$ref": "f_27"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 180,
+          "height": 34,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#1E4D45",
+            "cornerRadius": 12,
+            "sizingH": "fill",
+            "sizingV": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_29",
+        "params": {
+          "type": "text",
+          "text": "Sumber Dana (3)",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13,
+            "fill": "#FAF9F6",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_30",
+        "params": {
+          "type": "frame",
+          "name": "Tab Kategori (11)",
+          "parent": {
+            "$ref": "f_27"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 180,
+          "height": 34,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "none",
+            "cornerRadius": 12,
+            "sizingH": "fill",
+            "sizingV": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_31",
+        "params": {
+          "type": "text",
+          "text": "Kategori (11)",
+          "parent": {
+            "$ref": "f_30"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 13,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_32",
+        "params": {
+          "type": "frame",
+          "name": "Add Account CTA",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 44,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#E2EDE9",
+            "stroke": "#1E4D4533",
+            "strokeWeight": 1,
+            "cornerRadius": 16,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_33",
+        "params": {
+          "type": "text",
+          "text": "+  Tambah Akun / E-Wallet",
+          "parent": {
+            "$ref": "f_32"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13.5,
+            "fill": "#1E4D45"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_34",
+        "params": {
+          "type": "frame",
+          "name": "Akun Aktif Eyebrow",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 16,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_35",
+        "params": {
+          "type": "text",
+          "text": "AKUN AKTIF",
+          "parent": {
+            "$ref": "f_34"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#5A5F66",
+            "letterSpacing": 0.6
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_36",
+        "params": {
+          "type": "text",
+          "text": "Total Rp 18.450.000",
+          "parent": {
+            "$ref": "f_34"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11.5,
+            "fill": "#1E4D45",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_37",
+        "params": {
+          "type": "frame",
+          "name": "Active Accounts List",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 196,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 8,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_38",
+        "params": {
+          "type": "frame",
+          "name": "Account Card BCA",
+          "parent": {
+            "$ref": "f_37"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 60,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              10,
+              12,
+              10,
+              12
+            ],
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 16,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_39",
+        "params": {
+          "type": "frame",
+          "name": "Acc Left BCA",
+          "parent": {
+            "$ref": "f_38"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 230,
+          "height": 38,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_40",
+        "params": {
+          "type": "frame",
+          "name": "Acc Icon BCA",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 38,
+          "height": 38,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#3D5473",
+            "cornerRadius": 12
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_41",
+        "params": {
+          "type": "text",
+          "text": "B",
+          "parent": {
+            "$ref": "f_40"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 14,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_42",
+        "params": {
+          "type": "frame",
+          "name": "Acc Meta BCA",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 180,
+          "height": 36,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_43",
+        "params": {
+          "type": "text",
+          "text": "BCA",
+          "parent": {
+            "$ref": "f_42"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_44",
+        "params": {
+          "type": "text",
+          "text": "Bank • Rp 14.200.000",
+          "parent": {
+            "$ref": "f_42"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_45",
+        "params": {
+          "type": "frame",
+          "name": "Acc Actions BCA",
+          "parent": {
+            "$ref": "f_38"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 102,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 6,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_46",
+        "params": {
+          "type": "frame",
+          "name": "Edit BCA",
+          "parent": {
+            "$ref": "f_45"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 46,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F5F3EE",
+            "cornerRadius": 9
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_47",
+        "params": {
+          "type": "text",
+          "text": "Edit",
+          "parent": {
+            "$ref": "f_46"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_48",
+        "params": {
+          "type": "frame",
+          "name": "Arsip BCA",
+          "parent": {
+            "$ref": "f_45"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 50,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F5F3EE",
+            "cornerRadius": 9
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_49",
+        "params": {
+          "type": "text",
+          "text": "Arsip",
+          "parent": {
+            "$ref": "f_48"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_50",
+        "params": {
+          "type": "frame",
+          "name": "Account Card GoPay",
+          "parent": {
+            "$ref": "f_37"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 60,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              10,
+              12,
+              10,
+              12
+            ],
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 16,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_51",
+        "params": {
+          "type": "frame",
+          "name": "Acc Left GoPay",
+          "parent": {
+            "$ref": "f_50"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 230,
+          "height": 38,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_52",
+        "params": {
+          "type": "frame",
+          "name": "Acc Icon GoPay",
+          "parent": {
+            "$ref": "f_51"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 38,
+          "height": 38,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#2A6B57",
+            "cornerRadius": 12
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_53",
+        "params": {
+          "type": "text",
+          "text": "G",
+          "parent": {
+            "$ref": "f_52"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 14,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_54",
+        "params": {
+          "type": "frame",
+          "name": "Acc Meta GoPay",
+          "parent": {
+            "$ref": "f_51"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 180,
+          "height": 36,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_55",
+        "params": {
+          "type": "text",
+          "text": "GoPay",
+          "parent": {
+            "$ref": "f_54"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_56",
+        "params": {
+          "type": "text",
+          "text": "E-Wallet • Rp 2.850.000",
+          "parent": {
+            "$ref": "f_54"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_57",
+        "params": {
+          "type": "frame",
+          "name": "Acc Actions GoPay",
+          "parent": {
+            "$ref": "f_50"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 102,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 6,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_58",
+        "params": {
+          "type": "frame",
+          "name": "Edit GoPay",
+          "parent": {
+            "$ref": "f_57"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 46,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F5F3EE",
+            "cornerRadius": 9
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_59",
+        "params": {
+          "type": "text",
+          "text": "Edit",
+          "parent": {
+            "$ref": "f_58"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_60",
+        "params": {
+          "type": "frame",
+          "name": "Arsip GoPay",
+          "parent": {
+            "$ref": "f_57"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 50,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F5F3EE",
+            "cornerRadius": 9
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_61",
+        "params": {
+          "type": "text",
+          "text": "Arsip",
+          "parent": {
+            "$ref": "f_60"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_62",
+        "params": {
+          "type": "frame",
+          "name": "Account Card Tunai",
+          "parent": {
+            "$ref": "f_37"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 60,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              10,
+              12,
+              10,
+              12
+            ],
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 16,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_63",
+        "params": {
+          "type": "frame",
+          "name": "Acc Left Tunai",
+          "parent": {
+            "$ref": "f_62"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 230,
+          "height": 38,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_64",
+        "params": {
+          "type": "frame",
+          "name": "Acc Icon Tunai",
+          "parent": {
+            "$ref": "f_63"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 38,
+          "height": 38,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#1E4D45",
+            "cornerRadius": 12
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_65",
+        "params": {
+          "type": "text",
+          "text": "T",
+          "parent": {
+            "$ref": "f_64"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 14,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_66",
+        "params": {
+          "type": "frame",
+          "name": "Acc Meta Tunai",
+          "parent": {
+            "$ref": "f_63"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 180,
+          "height": 36,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_67",
+        "params": {
+          "type": "text",
+          "text": "Tunai",
+          "parent": {
+            "$ref": "f_66"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_68",
+        "params": {
+          "type": "text",
+          "text": "Tunai • Rp 1.400.000",
+          "parent": {
+            "$ref": "f_66"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_69",
+        "params": {
+          "type": "frame",
+          "name": "Acc Actions Tunai",
+          "parent": {
+            "$ref": "f_62"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 102,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 6,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_70",
+        "params": {
+          "type": "frame",
+          "name": "Edit Tunai",
+          "parent": {
+            "$ref": "f_69"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 46,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F5F3EE",
+            "cornerRadius": 9
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_71",
+        "params": {
+          "type": "text",
+          "text": "Edit",
+          "parent": {
+            "$ref": "f_70"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_72",
+        "params": {
+          "type": "frame",
+          "name": "Arsip Tunai",
+          "parent": {
+            "$ref": "f_69"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 50,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F5F3EE",
+            "cornerRadius": 9
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_73",
+        "params": {
+          "type": "text",
+          "text": "Arsip",
+          "parent": {
+            "$ref": "f_72"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_74",
+        "params": {
+          "type": "frame",
+          "name": "Kategori Preview Card",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 188,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 10,
+            "padding": 14,
+            "fill": "#F5F3EE",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 18,
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_75",
+        "params": {
+          "type": "frame",
+          "name": "Cat Preview Header",
+          "parent": {
+            "$ref": "f_74"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 344,
+          "height": 22,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_76",
+        "params": {
+          "type": "text",
+          "text": "KATEGORI & BATAS BULANAN",
+          "parent": {
+            "$ref": "f_75"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#5A5F66",
+            "letterSpacing": 0.5
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_77",
+        "params": {
+          "type": "frame",
+          "name": "Cat Type Pill",
+          "parent": {
+            "$ref": "f_75"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 84,
+          "height": 22,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              8,
+              0,
+              8
+            ],
+            "fill": "#F6E6E2",
+            "cornerRadius": 999,
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_78",
+        "params": {
+          "type": "text",
+          "text": "Pengeluaran",
+          "parent": {
+            "$ref": "f_77"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 10.5,
+            "fill": "#B8563F"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_79",
+        "params": {
+          "type": "frame",
+          "name": "Cat Row Makan & Minum",
+          "parent": {
+            "$ref": "f_74"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 344,
+          "height": 40,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              6,
+              10,
+              6,
+              10
+            ],
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 12,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_80",
+        "params": {
+          "type": "frame",
+          "name": "Cat L Makan & Minum",
+          "parent": {
+            "$ref": "f_79"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 240,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_81",
+        "params": {
+          "type": "frame",
+          "name": "Cat Ic Makan & Minum",
+          "parent": {
+            "$ref": "f_80"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 28,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F6E6E2",
+            "cornerRadius": 9
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_82",
+        "params": {
+          "type": "ellipse",
+          "name": "Cat Dot Makan & Minum",
+          "parent": {
+            "$ref": "f_81"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 9,
+          "select": false,
+          "props": {
+            "fill": "#B8563F"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_83",
+        "params": {
+          "type": "frame",
+          "name": "Cat T Makan & Minum",
+          "parent": {
+            "$ref": "f_80"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 196,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 1,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_84",
+        "params": {
+          "type": "text",
+          "text": "Makan & Minum",
+          "parent": {
+            "$ref": "f_83"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_85",
+        "params": {
+          "type": "text",
+          "text": "Batas: Rp 3.000.000 / bln",
+          "parent": {
+            "$ref": "f_83"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 10.5,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_86",
+        "params": {
+          "type": "frame",
+          "name": "Tag Makan & Minum",
+          "parent": {
+            "$ref": "f_79"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 54,
+          "height": 22,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              8,
+              0,
+              8
+            ],
+            "fill": "#EDEAE3",
+            "cornerRadius": 999,
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_87",
+        "params": {
+          "type": "text",
+          "text": "Sistem",
+          "parent": {
+            "$ref": "f_86"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 10,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_88",
+        "params": {
+          "type": "frame",
+          "name": "Cat Row Transportasi",
+          "parent": {
+            "$ref": "f_74"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 344,
+          "height": 40,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              6,
+              10,
+              6,
+              10
+            ],
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 12,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_89",
+        "params": {
+          "type": "frame",
+          "name": "Cat L Transportasi",
+          "parent": {
+            "$ref": "f_88"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 240,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_90",
+        "params": {
+          "type": "frame",
+          "name": "Cat Ic Transportasi",
+          "parent": {
+            "$ref": "f_89"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 28,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#E6ECF3",
+            "cornerRadius": 9
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_91",
+        "params": {
+          "type": "ellipse",
+          "name": "Cat Dot Transportasi",
+          "parent": {
+            "$ref": "f_90"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 9,
+          "select": false,
+          "props": {
+            "fill": "#3D5473"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_92",
+        "params": {
+          "type": "frame",
+          "name": "Cat T Transportasi",
+          "parent": {
+            "$ref": "f_89"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 196,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 1,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_93",
+        "params": {
+          "type": "text",
+          "text": "Transportasi",
+          "parent": {
+            "$ref": "f_92"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_94",
+        "params": {
+          "type": "text",
+          "text": "Batas: Rp 1.200.000 / bln",
+          "parent": {
+            "$ref": "f_92"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 10.5,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_95",
+        "params": {
+          "type": "frame",
+          "name": "Tag Transportasi",
+          "parent": {
+            "$ref": "f_88"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 54,
+          "height": 22,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              8,
+              0,
+              8
+            ],
+            "fill": "#EDEAE3",
+            "cornerRadius": 999,
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_96",
+        "params": {
+          "type": "text",
+          "text": "Sistem",
+          "parent": {
+            "$ref": "f_95"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 10,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_97",
+        "params": {
+          "type": "frame",
+          "name": "Cat Row Kopi & Nongkrong",
+          "parent": {
+            "$ref": "f_74"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 344,
+          "height": 40,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              6,
+              10,
+              6,
+              10
+            ],
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 12,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_98",
+        "params": {
+          "type": "frame",
+          "name": "Cat L Kopi & Nongkrong",
+          "parent": {
+            "$ref": "f_97"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 240,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_99",
+        "params": {
+          "type": "frame",
+          "name": "Cat Ic Kopi & Nongkrong",
+          "parent": {
+            "$ref": "f_98"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 28,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F4ECE0",
+            "cornerRadius": 9
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_100",
+        "params": {
+          "type": "ellipse",
+          "name": "Cat Dot Kopi & Nongkrong",
+          "parent": {
+            "$ref": "f_99"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 9,
+          "height": 9,
+          "select": false,
+          "props": {
+            "fill": "#A87633"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_101",
+        "params": {
+          "type": "frame",
+          "name": "Cat T Kopi & Nongkrong",
+          "parent": {
+            "$ref": "f_98"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 196,
+          "height": 28,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 1,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_102",
+        "params": {
+          "type": "text",
+          "text": "Kopi & Nongkrong",
+          "parent": {
+            "$ref": "f_101"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_103",
+        "params": {
+          "type": "text",
+          "text": "Batas: Rp 600.000 / bln",
+          "parent": {
+            "$ref": "f_101"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 10.5,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_104",
+        "params": {
+          "type": "frame",
+          "name": "Tag Kopi & Nongkrong",
+          "parent": {
+            "$ref": "f_97"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 54,
+          "height": 22,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              8,
+              0,
+              8
+            ],
+            "fill": "#E2EDE9",
+            "cornerRadius": 999,
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_105",
+        "params": {
+          "type": "text",
+          "text": "Kustom",
+          "parent": {
+            "$ref": "f_104"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 10,
+            "fill": "#1E4D45"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_106",
+        "params": {
+          "type": "frame",
+          "name": "Mineral Swatch Strip",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 44,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              14,
+              0,
+              14
+            ],
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 14,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_107",
+        "params": {
+          "type": "text",
+          "text": "Palet Mineral",
+          "parent": {
+            "$ref": "f_106"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_108",
+        "params": {
+          "type": "frame",
+          "name": "Swatches",
+          "parent": {
+            "$ref": "f_106"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 220,
+          "height": 24,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 8,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_109",
+        "params": {
+          "type": "frame",
+          "name": "Swatch Active Ring",
+          "parent": {
+            "$ref": "f_108"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 24,
+          "height": 24,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "none",
+            "stroke": "#1E4D45",
+            "strokeWeight": 1.5,
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_110",
+        "params": {
+          "type": "ellipse",
+          "name": "Swatch 0",
+          "parent": {
+            "$ref": "f_109"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 16,
+          "height": 16,
+          "select": false,
+          "props": {
+            "fill": "#1E4D45"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_111",
+        "params": {
+          "type": "ellipse",
+          "name": "Swatch 1",
+          "parent": {
+            "$ref": "f_108"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 18,
+          "height": 18,
+          "select": false,
+          "props": {
+            "fill": "#2A6B57"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_112",
+        "params": {
+          "type": "ellipse",
+          "name": "Swatch 2",
+          "parent": {
+            "$ref": "f_108"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 18,
+          "height": 18,
+          "select": false,
+          "props": {
+            "fill": "#3D5473"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_113",
+        "params": {
+          "type": "ellipse",
+          "name": "Swatch 3",
+          "parent": {
+            "$ref": "f_108"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 18,
+          "height": 18,
+          "select": false,
+          "props": {
+            "fill": "#B8563F"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_114",
+        "params": {
+          "type": "ellipse",
+          "name": "Swatch 4",
+          "parent": {
+            "$ref": "f_108"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 18,
+          "height": 18,
+          "select": false,
+          "props": {
+            "fill": "#A87633"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_115",
+        "params": {
+          "type": "ellipse",
+          "name": "Swatch 5",
+          "parent": {
+            "$ref": "f_108"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 18,
+          "height": 18,
+          "select": false,
+          "props": {
+            "fill": "#544B73"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_116",
+        "params": {
+          "type": "ellipse",
+          "name": "Swatch 6",
+          "parent": {
+            "$ref": "f_108"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 18,
+          "height": 18,
+          "select": false,
+          "props": {
+            "fill": "#6B5B4D"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_117",
+        "params": {
+          "type": "ellipse",
+          "name": "Swatch 7",
+          "parent": {
+            "$ref": "f_108"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 18,
+          "height": 18,
+          "select": false,
+          "props": {
+            "fill": "#5C6B5E"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_118",
+        "params": {
+          "type": "rectangle",
+          "name": "Home Indicator",
+          "parent": 228,
+          "x": 148,
+          "y": 903,
+          "width": 116,
+          "height": 4,
+          "select": false,
+          "props": {
+            "fill": "#1A1D1F2E",
+            "cornerRadius": 999
+          }
+        }
+      }
+    ]
+  }
+}

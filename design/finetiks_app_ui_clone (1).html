@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-[#E8EDF0]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>FINETIKS — Personal Finance App</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Phosphor Icons (MIT License) -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            finetiks: {
+              cyan: '#24B3C6',
+              cyanDark: '#198FA0',
+              cyanLight: '#E8F8FA',
+              purple: '#7C76E8',
+              purpleHover: '#6B65D8',
+              purpleLight: '#F0EFFF',
+              coral: '#E86F6A',
+              coralDark: '#D64545',
+              green: '#34C77B',
+              greenDark: '#2BB673',
+              darkHeader: '#2B2D32',
+              darkBg: '#3B3D42',
+              bgLight: '#F6F7FB',
+              textPrimary: '#1E232A',
+              textMuted: '#8E95A2'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .tnum {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Hide scrollbars for native touch experience */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Smooth view transitions */
+    .screen-view {
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    /* Privacy Blur */
+    .privacy-hidden .balance-text {
+      filter: blur(6px);
+      user-select: none;
+    }
+
+    /* Press interaction feedback */
+    .active-press {
+      transition: transform 0.1s ease, opacity 0.1s ease;
+    }
+    .active-press:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body class="h-full font-sans antialiased text-finetiks-textPrimary selection:bg-finetiks-cyanLight selection:text-finetiks-cyanDark">
+
+  <!-- OUTER DESKTOP CONTAINER CANVAS -->
+  <div class="min-h-full w-full flex items-center justify-center p-0 sm:p-4">
+
+    <!-- MOBILE APPLICATION FRAME (Max-Width 430px, centered on desktop, 100% on mobile) -->
+    <div id="app-container" class="w-full max-w-[430px] h-screen sm:h-[880px] bg-finetiks-bgLight sm:rounded-[36px] shadow-2xl flex flex-col relative overflow-hidden border-0 sm:border border-slate-200">
+
+      <!-- ================================================================= -->
+      <!-- VIEW 1: HOME DASHBOARD (SCREEN 1)                                -->
+      <!-- ================================================================= -->
+      <div id="view-home" class="screen-view flex-1 flex flex-col overflow-y-auto no-scrollbar pb-20">
+        
+        <!-- CYAN TOP HEADER -->
+        <div class="bg-gradient-to-b from-[#24B3C6] to-[#2CC2D6] px-5 pt-6 pb-9 relative shrink-0">
+          
+          <!-- Top Row: Welcome & Logo -->
+          <div class="flex items-center justify-between mb-5">
+            <div class="flex items-center gap-3">
+              <!-- Avatar Circle -->
+              <div class="w-10 h-10 rounded-full bg-pink-100 border-2 border-white/80 overflow-hidden flex items-center justify-center shadow-sm">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Avril&backgroundColor=ffdfbf" alt="Avril Avatar" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <div class="text-[11px] font-medium text-white/85">Welcome</div>
+                <div class="text-base font-bold text-white tracking-tight leading-tight">Avril</div>
+              </div>
+            </div>
+
+            <!-- FINETIKS Wordmark & Logo -->
+            <div class="flex items-center gap-1.5">
+              <!-- 3 slanted bars logo -->
+              <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                <path d="M4 6h12a2 2 0 012 2v0a2 2 0 01-2 2H4a2 2 0 01-2-2v0a2 2 0 012-2z" transform="rotate(-25 10 8)" />
+                <path d="M4 12h10a2 2 0 012 2v0a2 2 0 01-2 2H4a2 2 0 01-2-2v0a2 2 0 012-2z" transform="rotate(-25 9 13)" />
+                <path d="M4 18h7a2 2 0 012 2v0a2 2 0 01-2 2H4a2 2 0 01-2-2v0a2 2 0 012-2z" transform="rotate(-25 8 19)" />
+              </svg>
+              <span class="font-extrabold text-white text-lg tracking-wider">FINETIKS</span>
+            </div>
+          </div>
+
+          <!-- Total Balance Glass Box -->
+          <div id="balance-card" class="bg-[rgba(16,130,148,0.45)] backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white shadow-inner">
+            <div class="flex items-center justify-between mb-1.5">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-medium text-white/90">Total Balance</span>
+                <button onclick="togglePrivacy()" aria-label="Toggle Balance Privacy" class="text-white/80 hover:text-white transition">
+                  <i id="privacy-eye-icon" class="ph ph-eye text-sm"></i>
+                </button>
+              </div>
+              <button onclick="switchView('spending')" class="text-xs font-semibold text-white/95 hover:text-white flex items-center gap-0.5 active-press">
+                See All <i class="ph ph-caret-right text-xs"></i>
+              </button>
+            </div>
+            
+            <div class="text-2xl font-extrabold tracking-tight tnum balance-text">
+              Rp <span id="home-total-balance">190.000.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN WHITE OVERLAPPING CONTENT SHEET -->
+        <div class="bg-finetiks-bgLight rounded-t-[28px] -mt-5 pt-4 px-4 space-y-4 flex-1">
+          
+          <!-- Record Transaction Card -->
+          <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100/80">
+            <h3 class="text-xs font-semibold text-finetiks-textMuted uppercase tracking-wider mb-3">Record Transaction</h3>
+            
+            <div class="grid grid-cols-3 gap-2">
+              <!-- Upload Pill Button -->
+              <button onclick="openRecordModal('upload')" class="bg-finetiks-purple hover:bg-finetiks-purpleHover text-white py-2.5 px-2 rounded-full flex items-center justify-center gap-1.5 text-xs font-semibold shadow-sm active-press">
+                <i class="ph ph-file-pdf text-base"></i>
+                <span>Upload</span>
+              </button>
+
+              <!-- Voice Pill Button -->
+              <button onclick="openRecordModal('voice')" class="bg-finetiks-purple hover:bg-finetiks-purpleHover text-white py-2.5 px-2 rounded-full flex items-center justify-center gap-1.5 text-xs font-semibold shadow-sm active-press">
+                <i class="ph ph-broadcast text-base"></i>
+                <span>Voice</span>
+              </button>
+
+              <!-- Manual Pill Button -->
+              <button onclick="openRecordModal('manual')" class="bg-finetiks-purple hover:bg-finetiks-purpleHover text-white py-2.5 px-2 rounded-full flex items-center justify-center gap-1.5 text-xs font-semibold shadow-sm active-press">
+                <i class="ph ph-receipt text-base"></i>
+                <span>Manual</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2-COLUMN PROGRESS WIDGET GRID -->
+          <div class="grid grid-cols-2 gap-3">
+            
+            <!-- Left Card: January Spending -->
+            <div onclick="switchView('spending')" class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-100/80 cursor-pointer hover:border-finetiks-cyan/40 transition active-press">
+              <div class="text-xs font-medium text-finetiks-textMuted mb-2.5 truncate">January Spending</div>
+              
+              <div class="flex items-center gap-3">
+                <!-- Circular Donut SVG (75% Coral) -->
+                <div class="relative w-12 h-12 shrink-0">
+                  <svg class="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36">
+                    <path class="text-slate-100" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path id="spending-donut-path" class="text-finetiks-coral transition-all duration-500" stroke-width="3.5" stroke-dasharray="75, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+                  <div id="spending-donut-text" class="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-finetiks-textMuted">
+                    75%
+                  </div>
+                </div>
+
+                <div>
+                  <div class="text-sm font-extrabold text-finetiks-coralDark tnum leading-tight" id="home-spending-amount">Rp 3M</div>
+                  <div class="text-[11px] font-medium text-finetiks-textMuted tnum" id="home-spending-budget">/ Rp 4M</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Card: Tabungan Januari -->
+            <div class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-100/80">
+              <div class="text-xs font-medium text-finetiks-textMuted mb-2.5 truncate">Tabungan Januari</div>
+              
+              <div class="flex items-center gap-3">
+                <!-- Circular Donut SVG (110% Green) -->
+                <div class="relative w-12 h-12 shrink-0">
+                  <svg class="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36">
+                    <path class="text-slate-100" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="text-finetiks-green" stroke-width="3.5" stroke-dasharray="100, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+                  <div class="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-finetiks-green">
+                    110%
+                  </div>
+                </div>
+
+                <div>
+                  <div class="text-sm font-extrabold text-finetiks-greenDark tnum leading-tight">Rp 4.4jt</div>
+                  <div class="text-[11px] font-medium text-finetiks-textMuted tnum">/ Rp 4jt</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECOND ROW 2-COLUMN GRID -->
+          <div class="grid grid-cols-2 gap-3">
+            
+            <!-- Stacked Payday & Bills Card -->
+            <div class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-100/80 flex flex-col justify-between">
+              <div>
+                <div class="text-[11px] font-medium text-finetiks-textMuted">Payday In</div>
+                <div class="text-sm font-extrabold text-finetiks-textPrimary leading-tight">12 Days!</div>
+              </div>
+              
+              <div class="w-full h-[1px] bg-slate-100 my-2"></div>
+              
+              <div>
+                <div class="text-[11px] font-medium text-finetiks-textMuted">Bills to Pay</div>
+                <div class="text-sm font-extrabold text-finetiks-textPrimary leading-tight tnum" id="home-bills-amount">Rp 600k</div>
+              </div>
+            </div>
+
+            <!-- Gamification Rank Card -->
+            <div class="bg-white rounded-2xl p-3.5 shadow-sm border border-slate-100/80 flex flex-col justify-between">
+              <div class="flex items-start justify-between">
+                <!-- Blue Shield Badge Icon -->
+                <div class="relative w-8 h-9 flex flex-col items-center justify-center">
+                  <div class="w-7 h-8 bg-blue-500 rounded-b-lg rounded-t-sm flex items-center justify-center text-white shadow-xs">
+                    <i class="ph-fill ph-star text-xs text-yellow-300"></i>
+                  </div>
+                  <div class="bg-indigo-900 text-[7px] font-bold text-white px-1 rounded-xs uppercase tracking-tighter -mt-1 z-10">
+                    NOVICE
+                  </div>
+                </div>
+
+                <div class="text-right">
+                  <div class="text-[10px] font-medium text-finetiks-textMuted">Your Rank</div>
+                  <div class="flex items-center justify-end gap-1">
+                    <span class="text-base font-extrabold text-finetiks-textPrimary">34</span>
+                    <span class="text-[10px] font-bold text-finetiks-green flex items-center">
+                      <i class="ph-bold ph-caret-double-up"></i>4
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-1 pt-2 border-t border-slate-100 mt-2">
+                <div>
+                  <div class="text-[9px] font-medium text-finetiks-textMuted">Points</div>
+                  <div class="text-xs font-extrabold text-finetiks-textPrimary tnum">110</div>
+                </div>
+                <div>
+                  <div class="text-[9px] font-medium text-finetiks-textMuted">Speed</div>
+                  <div class="text-xs font-extrabold text-finetiks-textPrimary tnum">12.52s</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- BOTTOM PROFILE COMPLETION BANNER CARD -->
+          <div id="profile-banner" class="bg-finetiks-purpleLight rounded-2xl p-3.5 flex items-center justify-between border border-finetiks-purple/20 shadow-xs">
+            <div class="flex items-center gap-2.5">
+              <span class="text-lg">💰</span>
+              <p class="text-xs text-indigo-950 font-medium leading-snug">
+                Hi Avril! Let's <button onclick="switchView('profile')" class="font-bold underline text-finetiks-purple">complete your profile</button> to manage your finances better
+              </p>
+            </div>
+            <button onclick="dismissBanner()" aria-label="Dismiss banner" class="text-finetiks-textMuted hover:text-finetiks-textPrimary text-xs p-1">
+              <i class="ph ph-x"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- VIEW 2: SPENDING DETAILS (SCREEN 2)                              -->
+      <!-- ================================================================= -->
+      <div id="view-spending" class="screen-view flex-1 flex flex-col overflow-y-auto no-scrollbar pb-20 hidden">
+        
+        <!-- DARK CHARCOAL TOP SECTION -->
+        <div class="bg-finetiks-darkHeader px-4 pt-5 pb-8 relative shrink-0">
+          
+          <!-- Top Header Navigation Bar -->
+          <div class="flex items-center justify-between mb-4">
+            <button onclick="switchView('home')" aria-label="Back to Home" class="w-8 h-8 rounded-xl bg-[#45484F] flex items-center justify-center text-white hover:bg-slate-600 transition active-press">
+              <i class="ph-bold ph-arrow-left text-sm"></i>
+            </button>
+            <h1 class="text-sm font-bold text-white">Spending Details</h1>
+            <div class="w-8"></div> <!-- Spacer for symmetry -->
+          </div>
+
+          <!-- Overall Spending Card -->
+          <div class="bg-white rounded-2xl p-4 shadow-md space-y-3">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="text-xs font-medium text-finetiks-textMuted flex items-center gap-1">
+                  <span>💸</span> Overall Spending
+                </div>
+                <div class="text-lg font-extrabold text-finetiks-coralDark tnum mt-0.5" id="spending-total-val">
+                  Rp 3.000.000 <span class="text-xs font-normal text-finetiks-textMuted" id="spending-budget-val">/ Rp 4.000.000</span>
+                </div>
+              </div>
+
+              <button onclick="openBudgetModal()" class="bg-finetiks-cyan hover:bg-finetiks-cyanDark text-white px-3 py-1.5 rounded-xl text-xs font-bold shadow-xs active-press">
+                My Budget
+              </button>
+            </div>
+
+            <!-- Horizontal Progress Bar -->
+            <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div id="overall-progress-bar" class="h-full bg-finetiks-coralDark rounded-full transition-all duration-500" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN WHITE SHEET CONTAINER -->
+        <div class="bg-white rounded-t-[28px] -mt-4 pt-5 px-4 space-y-4 flex-1">
+          
+          <!-- Needs Spending Overview Header -->
+          <div class="space-y-2">
+            <div class="text-xs font-bold text-finetiks-textPrimary flex items-center gap-1.5">
+              <span>🛒</span> Needs Spending Overview
+            </div>
+
+            <div class="text-sm font-extrabold text-finetiks-coralDark tnum" id="needs-amount-val">
+              Rp 2.000.000 <span class="text-xs font-normal text-finetiks-textMuted">/ Rp 2.500.000</span>
+            </div>
+
+            <!-- Slim Red Progress Bar -->
+            <div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+              <div id="needs-progress-bar" class="h-full bg-finetiks-coralDark rounded-full transition-all duration-500" style="width: 80%"></div>
+            </div>
+
+            <!-- Money Left Summary Row -->
+            <div class="flex items-center justify-between pt-1">
+              <div class="text-xs font-medium text-finetiks-textMuted flex items-center gap-1">
+                <span>🔥</span> Money Left
+              </div>
+              <div class="text-xs font-extrabold text-finetiks-textPrimary tnum" id="money-left-val">
+                Rp 600.000
+              </div>
+            </div>
+          </div>
+
+          <!-- DARK ROUNDED CATEGORY LIST CONTAINER -->
+          <div class="bg-finetiks-darkBg rounded-2xl p-3 space-y-2">
+            <div class="text-[11px] font-semibold text-slate-300 px-1 mb-1 flex items-center justify-between">
+              <span>Category Expenses</span>
+              <span class="text-[10px] text-slate-400 font-normal">Tap category to add expense</span>
+            </div>
+
+            <div id="category-cards-container" class="space-y-2">
+              <!-- Rendered dynamically via JS -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- VIEW 3: GOALS (ADDITIONAL MATCHING SCREEN)                        -->
+      <!-- ================================================================= -->
+      <div id="view-goals" class="screen-view flex-1 flex flex-col p-5 space-y-4 overflow-y-auto no-scrollbar pb-20 hidden">
+        <h2 class="text-xl font-extrabold text-finetiks-textPrimary">Financial Goals 🎯</h2>
+        <p class="text-xs text-finetiks-textMuted">Track your savings targets and future milestones.</p>
+        
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-finetiks-textPrimary">Emergency Fund</span>
+            <span class="text-xs font-extrabold text-finetiks-green tnum">68%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+            <div class="h-full bg-finetiks-green rounded-full" style="width: 68%"></div>
+          </div>
+          <div class="text-xs text-finetiks-textMuted tnum">Rp 34.000.000 / Rp 50.000.000</div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-finetiks-textPrimary">Japan Trip 2027</span>
+            <span class="text-xs font-extrabold text-finetiks-cyan tnum">40%</span>
+          </div>
+          <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+            <div class="h-full bg-finetiks-cyan rounded-full" style="width: 40%"></div>
+          </div>
+          <div class="text-xs text-finetiks-textMuted tnum">Rp 12.000.000 / Rp 30.000.000</div>
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- VIEW 4: PROFILE (ADDITIONAL MATCHING SCREEN)                      -->
+      <!-- ================================================================= -->
+      <div id="view-profile" class="screen-view flex-1 flex flex-col p-5 space-y-4 overflow-y-auto no-scrollbar pb-20 hidden">
+        <div class="flex items-center gap-3 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+          <div class="w-14 h-14 rounded-full bg-pink-100 overflow-hidden border-2 border-finetiks-cyan">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Avril&backgroundColor=ffdfbf" alt="Avril Avatar" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="text-base font-extrabold text-finetiks-textPrimary">Avril Ramona</div>
+            <div class="text-xs text-finetiks-textMuted">avril.ramona@finetiks.app</div>
+            <div class="mt-1 inline-block bg-finetiks-purpleLight text-finetiks-purple font-bold text-[10px] px-2 py-0.5 rounded-full">PRO MEMBER</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-4 border border-slate-100 shadow-sm space-y-3 text-xs font-medium text-finetiks-textPrimary">
+          <div class="flex items-center justify-between py-1 border-b border-slate-100">
+            <span>Linked Accounts & E-Wallets</span>
+            <span class="text-finetiks-textMuted">4 Linked ›</span>
+          </div>
+          <div class="flex items-center justify-between py-1 border-b border-slate-100">
+            <span>Security & Biometrics</span>
+            <span class="text-finetiks-green font-bold">Enabled</span>
+          </div>
+          <div class="flex items-center justify-between py-1">
+            <span>Currency Format</span>
+            <span class="text-finetiks-textMuted">IDR (Rp)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- PERSISTENT BOTTOM NAVIGATION BAR                                  -->
+      <!-- ================================================================= -->
+      <nav class="absolute bottom-0 left-0 right-0 bg-white border-t border-slate-100 px-3 py-2 z-30 shadow-lg">
+        <div class="grid grid-cols-4 items-center">
+          
+          <!-- Tab 1: Home -->
+          <button onclick="switchView('home')" id="tab-btn-home" class="nav-tab flex flex-col items-center gap-1 text-finetiks-cyan font-semibold active-press">
+            <i class="ph-fill ph-house text-xl"></i>
+            <span class="text-[10px]">Home</span>
+          </button>
+
+          <!-- Tab 2: Spending -->
+          <button onclick="switchView('spending')" id="tab-btn-spending" class="nav-tab flex flex-col items-center gap-1 text-finetiks-textMuted font-medium hover:text-finetiks-cyan active-press">
+            <i class="ph ph-receipt text-xl"></i>
+            <span class="text-[10px]">Spending</span>
+          </button>
+
+          <!-- Tab 3: Goals -->
+          <button onclick="switchView('goals')" id="tab-btn-goals" class="nav-tab flex flex-col items-center gap-1 text-finetiks-textMuted font-medium hover:text-finetiks-cyan active-press">
+            <i class="ph ph-target text-xl"></i>
+            <span class="text-[10px]">Goals</span>
+          </button>
+
+          <!-- Tab 4: Profile -->
+          <button onclick="switchView('profile')" id="tab-btn-profile" class="nav-tab flex flex-col items-center gap-1 text-finetiks-textMuted font-medium hover:text-finetiks-cyan active-press">
+            <i class="ph ph-user text-xl"></i>
+            <span class="text-[10px]">Profile</span>
+          </button>
+
+        </div>
+      </nav>
+
+      <!-- ================================================================= -->
+      <!-- MODAL: RECORD TRANSACTION (Upload / Voice / Manual)               -->
+      <!-- ================================================================= -->
+      <div id="modal-record" class="absolute inset-0 bg-black/50 backdrop-blur-xs z-50 flex items-end justify-center opacity-0 pointer-events-none transition-opacity duration-200">
+        <div id="modal-record-card" class="w-full bg-white rounded-t-3xl p-5 space-y-4 transform translate-y-full transition-transform duration-200 max-h-[90%] overflow-y-auto">
+          
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+            <h3 class="text-sm font-extrabold text-finetiks-textPrimary">Record Transaction</h3>
+            <button onclick="closeRecordModal()" class="text-finetiks-textMuted hover:text-finetiks-textPrimary p-1">
+              <i class="ph ph-x text-base"></i>
+            </button>
+          </div>
+
+          <!-- Mode Switcher -->
+          <div class="grid grid-cols-3 p-1 bg-slate-100 rounded-full text-xs font-medium">
+            <button onclick="setRecordMode('manual')" id="mode-btn-manual" class="py-1.5 rounded-full bg-white text-finetiks-purple font-bold shadow-xs">Manual</button>
+            <button onclick="setRecordMode('voice')" id="mode-btn-voice" class="py-1.5 rounded-full text-finetiks-textMuted">Voice</button>
+            <button onclick="setRecordMode('upload')" id="mode-btn-upload" class="py-1.5 rounded-full text-finetiks-textMuted">Upload</button>
+          </div>
+
+          <!-- MANUAL FORM -->
+          <form id="form-record-manual" onsubmit="handleAddExpense(event)" class="space-y-3">
+            <div>
+              <label for="input-amount" class="block text-[11px] font-semibold text-finetiks-textMuted mb-1">Amount (Rp)</label>
+              <input type="number" id="input-amount" required min="1000" placeholder="e.g. 50000" class="w-full border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold tnum focus:outline-none focus:border-finetiks-purple">
+            </div>
+
+            <div>
+              <label for="input-category" class="block text-[11px] font-semibold text-finetiks-textMuted mb-1">Category</label>
+              <select id="input-category" class="w-full border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold focus:outline-none focus:border-finetiks-purple">
+                <option value="Groceries">Groceries</option>
+                <option value="Health">Health</option>
+                <option value="Utilities">Utilities</option>
+                <option value="House">House</option>
+                <option value="Service Fee">Service Fee</option>
+                <option value="Loan">Loan</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="input-note" class="block text-[11px] font-semibold text-finetiks-textMuted mb-1">Note (Optional)</label>
+              <input type="text" id="input-note" placeholder="Supermarket, Coffee, etc." class="w-full border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-finetiks-purple">
+            </div>
+
+            <button type="submit" class="w-full bg-finetiks-purple hover:bg-finetiks-purpleHover text-white py-3 rounded-xl font-bold text-xs shadow-md active-press">
+              Save Expense
+            </button>
+          </form>
+
+          <!-- VOICE SIMULATION -->
+          <div id="section-voice" class="hidden text-center py-6 space-y-3">
+            <div id="voice-waves" class="w-16 h-16 rounded-full bg-finetiks-purpleLight text-finetiks-purple flex items-center justify-center mx-auto text-2xl animate-pulse">
+              <i class="ph ph-microphone"></i>
+            </div>
+            <p class="text-xs text-finetiks-textMuted">Say something like:<br><span class="font-bold text-finetiks-textPrimary">"Spent 50 thousand on Groceries"</span></p>
+            <button onclick="simulateVoiceRecord()" class="bg-finetiks-purple text-white px-4 py-2 rounded-full text-xs font-bold shadow-xs active-press">
+              Simulate Voice Input
+            </button>
+          </div>
+
+          <!-- UPLOAD SIMULATION -->
+          <div id="section-upload" class="hidden text-center py-6 space-y-3 border-2 border-dashed border-slate-200 rounded-2xl">
+            <i class="ph ph-cloud-arrow-up text-3xl text-finetiks-purple"></i>
+            <p class="text-xs text-finetiks-textMuted">Drag & drop your receipt image or PDF</p>
+            <button onclick="simulateUploadRecord()" class="bg-finetiks-purple text-white px-4 py-2 rounded-full text-xs font-bold shadow-xs active-press">
+              Upload Sample Receipt
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- MODAL: EDIT BUDGET                                                -->
+      <!-- ================================================================= -->
+      <div id="modal-budget" class="absolute inset-0 bg-black/50 backdrop-blur-xs z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-200">
+        <div class="w-full max-w-xs bg-white rounded-2xl p-5 space-y-4 shadow-xl">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-extrabold text-finetiks-textPrimary">Edit Monthly Budget</h3>
+            <button onclick="closeBudgetModal()" class="text-finetiks-textMuted hover:text-finetiks-textPrimary p-1">
+              <i class="ph ph-x text-base"></i>
+            </button>
+          </div>
+
+          <form onsubmit="handleSaveBudget(event)" class="space-y-3">
+            <div>
+              <label for="input-budget-val" class="block text-[11px] font-semibold text-finetiks-textMuted mb-1">Target Monthly Budget (Rp)</label>
+              <input type="number" id="input-budget-val" required min="100000" step="100000" class="w-full border border-slate-200 rounded-xl px-3 py-2 text-xs font-bold tnum focus:outline-none focus:border-finetiks-cyan">
+            </div>
+
+            <button type="submit" class="w-full bg-finetiks-cyan hover:bg-finetiks-cyanDark text-white py-2.5 rounded-xl font-bold text-xs shadow-md active-press">
+              Update Budget
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- TOAST NOTIFICATION -->
+      <div id="toast" class="absolute top-4 left-1/2 -translate-x-1/2 bg-finetiks-textPrimary text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg z-50 opacity-0 pointer-events-none transition-opacity duration-200 whitespace-nowrap flex items-center gap-1.5">
+        <i class="ph-fill ph-check-circle text-finetiks-green text-sm"></i>
+        <span id="toast-text">Updated!</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JavaScript Logic & Dynamic State Handler -->
+  <script>
+    // State matching screenshot figures dynamically
+    const appState = {
+      totalBalance: 190000000,
+      monthlyBudget: 4000000,
+      privacyHidden: false,
+      categories: [
+        { id: 'groceries', name: 'Groceries', icon: 'ph-shopping-bag-open', color: 'bg-emerald-100 text-emerald-600', spent: 100000, budget: 700000 },
+        { id: 'health', name: 'Health', icon: 'ph-heartbeat', color: 'bg-rose-100 text-rose-600', spent: 50000, budget: 50000 },
+        { id: 'utilities', name: 'Utilities', icon: 'ph-lightning', color: 'bg-amber-100 text-amber-600', spent: 100000, budget: 150000 },
+        { id: 'house', name: 'House', icon: 'ph-house-line', color: 'bg-blue-100 text-blue-600', spent: 1500000, budget: 1500000 },
+        { id: 'service', name: 'Service Fee', icon: 'ph-wrench', color: 'bg-indigo-100 text-indigo-600', spent: 150000, budget: 50000 },
+        { id: 'loan', name: 'Loan', icon: 'ph-bank', color: 'bg-purple-100 text-purple-600', spent: 100000, budget: 100000 }
+      ]
+    };
+
+    function formatRpShort(num) {
+      if (num >= 1000000) {
+        const val = num / 1000000;
+        return 'Rp ' + (val % 1 === 0 ? val : val.toFixed(1)) + 'M';
+      } else if (num >= 1000) {
+        return 'Rp ' + Math.round(num / 1000) + 'k';
+      }
+      return 'Rp ' + num;
+    }
+
+    function formatRpFull(num) {
+      return new Intl.NumberFormat('id-ID').format(num);
+    }
+
+    // View Navigation
+    function switchView(viewName) {
+      document.querySelectorAll('.screen-view').forEach(el => el.classList.add('hidden'));
+      document.getElementById(`view-${viewName}`).classList.remove('hidden');
+
+      // Update Nav Bar Active Colors
+      document.querySelectorAll('.nav-tab').forEach(btn => {
+        const isCurrent = btn.id === `tab-btn-${viewName}`;
+        const icon = btn.querySelector('i');
+        btn.className = `nav-tab flex flex-col items-center gap-1 font-semibold active-press ${isCurrent ? 'text-finetiks-cyan' : 'text-finetiks-textMuted hover:text-finetiks-cyan'}`;
+        
+        // Fill icon when active
+        if (icon) {
+          if (isCurrent && !icon.classList.contains('ph-fill')) {
+            icon.className = icon.className.replace('ph ', 'ph-fill ');
+          } else if (!isCurrent && icon.classList.contains('ph-fill')) {
+            icon.className = icon.className.replace('ph-fill ', 'ph ');
+          }
+        }
+      });
+
+      // Scroll to top of view
+      document.getElementById(`view-${viewName}`).scrollTop = 0;
+    }
+
+    // Recalculate and update UI components
+    function updateUI() {
+      const totalSpent = appState.categories.reduce((acc, cat) => acc + cat.spent, 0);
+      const budget = appState.monthlyBudget;
+      const spendingPct = Math.min(100, Math.round((totalSpent / budget) * 100));
+
+      // 1. Home Screen Figures
+      document.getElementById('home-total-balance').textContent = formatRpFull(appState.totalBalance);
+      document.getElementById('home-spending-amount').textContent = formatRpShort(totalSpent);
+      document.getElementById('home-spending-budget').textContent = '/ ' + formatRpShort(budget);
+      
+      // Update Donut Chart SVG
+      const donutPath = document.getElementById('spending-donut-path');
+      const donutText = document.getElementById('spending-donut-text');
+      if (donutPath && donutText) {
+        donutPath.setAttribute('stroke-dasharray', `${spendingPct}, 100`);
+        donutText.textContent = `${spendingPct}%`;
+      }
+
+      // 2. Spending Details Screen Figures
+      document.getElementById('spending-total-val').innerHTML = `Rp ${formatRpFull(totalSpent)} <span class="text-xs font-normal text-finetiks-textMuted">/ Rp ${formatRpFull(budget)}</span>`;
+      document.getElementById('overall-progress-bar').style.width = `${spendingPct}%`;
+
+      // Needs overview (using subset of categories: Groceries, Health, Utilities, House)
+      const needsCategories = ['Groceries', 'Health', 'Utilities', 'House'];
+      const needsSpent = appState.categories
+        .filter(c => needsCategories.includes(c.name))
+        .reduce((sum, c) => sum + c.spent, 0);
+      const needsBudget = 2500000;
+      const needsPct = Math.min(100, Math.round((needsSpent / needsBudget) * 100));
+      const moneyLeft = Math.max(0, needsBudget - needsSpent);
+
+      document.getElementById('needs-amount-val').innerHTML = `Rp ${formatRpFull(needsSpent)} <span class="text-xs font-normal text-finetiks-textMuted">/ Rp ${formatRpFull(needsBudget)}</span>`;
+      document.getElementById('needs-progress-bar').style.width = `${needsPct}%`;
+      document.getElementById('money-left-val').textContent = `Rp ${formatRpFull(moneyLeft)}`;
+
+      // 3. Render Category List Cards inside Dark Container
+      const catContainer = document.getElementById('category-cards-container');
+      catContainer.innerHTML = appState.categories.map(cat => {
+        const isOverBudget = cat.spent > cat.budget;
+        return `
+          <div onclick="quickAddCategoryExpense('${cat.name}')" class="bg-white rounded-xl p-2.5 flex items-center justify-between cursor-pointer hover:bg-slate-50 transition active-press">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg ${cat.color} flex items-center justify-center text-base shrink-0">
+                <i class="ph ${cat.icon}"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-finetiks-textPrimary">${cat.name}</div>
+                <div class="text-[10px] ${isOverBudget ? 'text-rose-500 font-bold' : 'text-finetiks-textMuted'} tnum">
+                  Rp ${formatRpFull(cat.spent)} <span class="text-slate-400 font-normal">/ Rp ${formatRpFull(cat.budget)}</span>
+                  ${isOverBudget ? '⚠️ Over' : ''}
+                </div>
+              </div>
+            </div>
+            <i class="ph ph-plus-circle text-finetiks-textMuted hover:text-finetiks-cyan text-base"></i>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Privacy Toggle
+    function togglePrivacy() {
+      appState.privacyHidden = !appState.privacyHidden;
+      document.getElementById('balance-card').classList.toggle('privacy-hidden', appState.privacyHidden);
+      document.getElementById('privacy-eye-icon').className = appState.privacyHidden ? 'ph ph-eye-slash text-sm' : 'ph ph-eye text-sm';
+      showToast(appState.privacyHidden ? 'Balance Hidden' : 'Balance Visible');
+    }
+
+    // Record Transaction Modal Logic
+    function openRecordModal(mode = 'manual') {
+      setRecordMode(mode);
+      document.getElementById('modal-record').classList.remove('opacity-0', 'pointer-events-none');
+      document.getElementById('modal-record-card').classList.remove('translate-y-full');
+    }
+
+    function closeRecordModal() {
+      document.getElementById('modal-record-card').classList.add('translate-y-full');
+      document.getElementById('modal-record').classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    function setRecordMode(mode) {
+      const btnManual = document.getElementById('mode-btn-manual');
+      const btnVoice = document.getElementById('mode-btn-voice');
+      const btnUpload = document.getElementById('mode-btn-upload');
+      
+      const formManual = document.getElementById('form-record-manual');
+      const secVoice = document.getElementById('section-voice');
+      const secUpload = document.getElementById('section-upload');
+
+      [btnManual, btnVoice, btnUpload].forEach(b => b.className = 'py-1.5 rounded-full text-finetiks-textMuted');
+      [formManual, secVoice, secUpload].forEach(s => s.classList.add('hidden'));
+
+      if (mode === 'manual') {
+        btnManual.className = 'py-1.5 rounded-full bg-white text-finetiks-purple font-bold shadow-xs';
+        formManual.classList.remove('hidden');
+      } else if (mode === 'voice') {
+        btnVoice.className = 'py-1.5 rounded-full bg-white text-finetiks-purple font-bold shadow-xs';
+        secVoice.classList.remove('hidden');
+      } else {
+        btnUpload.className = 'py-1.5 rounded-full bg-white text-finetiks-purple font-bold shadow-xs';
+        secUpload.classList.remove('hidden');
+      }
+    }
+
+    function handleAddExpense(e) {
+      e.preventDefault();
+      const amount = parseInt(document.getElementById('input-amount').value, 10);
+      const catName = document.getElementById('input-category').value;
+
+      if (!amount || amount <= 0) return;
+
+      const cat = appState.categories.find(c => c.name === catName);
+      if (cat) {
+        cat.spent += amount;
+        appState.totalBalance -= amount;
+      }
+
+      updateUI();
+      closeRecordModal();
+      document.getElementById('form-record-manual').reset();
+      showToast(`Added Rp ${formatRpFull(amount)} to ${catName}`);
+    }
+
+    function simulateVoiceRecord() {
+      const cat = appState.categories[0]; // Groceries
+      cat.spent += 50000;
+      appState.totalBalance -= 50000;
+      updateUI();
+      closeRecordModal();
+      showToast('Voice parsed: +Rp 50.000 Groceries');
+    }
+
+    function simulateUploadRecord() {
+      const cat = appState.categories[2]; // Utilities
+      cat.spent += 75000;
+      appState.totalBalance -= 75000;
+      updateUI();
+      closeRecordModal();
+      showToast('Receipt scanned: +Rp 75.000 Utilities');
+    }
+
+    function quickAddCategoryExpense(catName) {
+      const cat = appState.categories.find(c => c.name === catName);
+      if (cat) {
+        cat.spent += 25000;
+        appState.totalBalance -= 25000;
+        updateUI();
+        showToast(`+Rp 25.000 added to ${catName}`);
+      }
+    }
+
+    // Edit Budget Modal Logic
+    function openBudgetModal() {
+      document.getElementById('input-budget-val').value = appState.monthlyBudget;
+      document.getElementById('modal-budget').classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    function closeBudgetModal() {
+      document.getElementById('modal-budget').classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    function handleSaveBudget(e) {
+      e.preventDefault();
+      const newBudget = parseInt(document.getElementById('input-budget-val').value, 10);
+      if (newBudget > 0) {
+        appState.monthlyBudget = newBudget;
+        updateUI();
+        closeBudgetModal();
+        showToast('Monthly Budget Updated');
+      }
+    }
+
+    function dismissBanner() {
+      document.getElementById('profile-banner').remove();
+    }
+
+    let toastTimer;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-text').textContent = msg;
+      toast.classList.remove('opacity-0');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('opacity-0');
+      }, 2000);
+    }
+
+    // Initialize UI on load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateUI();
+    });
+  </script>
+</body>
+</html>

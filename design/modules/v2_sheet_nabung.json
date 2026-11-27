@@ -1,0 +1,2089 @@
+{
+  "command": "command.batch",
+  "params": {
+    "label": "V2 — Sheet: Nabung & Target",
+    "commands": [
+      {
+        "command": "node.create",
+        "as": "f_1",
+        "params": {
+          "type": "frame",
+          "name": "Background Peek",
+          "parent": 227,
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "select": false,
+          "props": {
+            "fill": "#F5F3EE",
+            "clip": true
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_2",
+        "params": {
+          "type": "ellipse",
+          "name": "Aurora Sage",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "x": -40,
+          "y": -30,
+          "width": 260,
+          "height": 260,
+          "select": false,
+          "props": {
+            "fill": "#D8E4DE6B"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_3",
+        "params": {
+          "type": "ellipse",
+          "name": "Aurora Limestone",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "x": 230,
+          "y": 40,
+          "width": 240,
+          "height": 240,
+          "select": false,
+          "props": {
+            "fill": "#EAE0D361"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_4",
+        "params": {
+          "type": "frame",
+          "name": "Status Bar",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "x": 20,
+          "y": 12,
+          "width": 372,
+          "height": 22,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_5",
+        "params": {
+          "type": "text",
+          "text": "09:41",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12,
+            "fill": "#16181A",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_6",
+        "params": {
+          "type": "frame",
+          "name": "Status Icons",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 56,
+          "height": 14,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 5,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_7",
+        "params": {
+          "type": "rectangle",
+          "name": "Signal",
+          "parent": {
+            "$ref": "f_6"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 12,
+          "height": 8,
+          "select": false,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 2
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_8",
+        "params": {
+          "type": "rectangle",
+          "name": "Wifi",
+          "parent": {
+            "$ref": "f_6"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 8,
+          "select": false,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 2
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_9",
+        "params": {
+          "type": "rectangle",
+          "name": "Battery",
+          "parent": {
+            "$ref": "f_6"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 10,
+          "select": false,
+          "props": {
+            "fill": "#16181A",
+            "cornerRadius": 3
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_10",
+        "params": {
+          "type": "frame",
+          "name": "Peek App Header",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "x": 20,
+          "y": 40,
+          "width": 372,
+          "height": 48,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_11",
+        "params": {
+          "type": "frame",
+          "name": "Peek Title Col",
+          "parent": {
+            "$ref": "f_10"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 220,
+          "height": 44,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_12",
+        "params": {
+          "type": "text",
+          "text": "Nabung",
+          "parent": {
+            "$ref": "f_11"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Extra Bold",
+            "fontSize": 22,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_13",
+        "params": {
+          "type": "text",
+          "text": "Target tabungan & alokasi impian",
+          "parent": {
+            "$ref": "f_11"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_14",
+        "params": {
+          "type": "frame",
+          "name": "Peek Pill",
+          "parent": {
+            "$ref": "f_10"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 96,
+          "height": 30,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 6,
+            "padding": [
+              0,
+              12,
+              0,
+              12
+            ],
+            "fill": "#FFFFFFD6",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 999,
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_15",
+        "params": {
+          "type": "ellipse",
+          "name": "Pill Dot",
+          "parent": {
+            "$ref": "f_14"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 7,
+          "height": 7,
+          "select": false,
+          "props": {
+            "fill": "#2A6B57"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_16",
+        "params": {
+          "type": "text",
+          "text": "+ Target",
+          "parent": {
+            "$ref": "f_14"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 11,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_17",
+        "params": {
+          "type": "rectangle",
+          "name": "Modal Scrim",
+          "parent": 227,
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 915,
+          "select": false,
+          "props": {
+            "fill": "#14191844"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_18",
+        "params": {
+          "type": "frame",
+          "name": "Bottom Sheet",
+          "parent": 227,
+          "x": 0,
+          "y": 94,
+          "width": 412,
+          "height": 849,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 12,
+            "padding": [
+              10,
+              20,
+              44,
+              20
+            ],
+            "fill": "#FAF9F6",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 28,
+            "clip": true
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_19",
+        "params": {
+          "type": "frame",
+          "name": "Drag Handle Row",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 8,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_20",
+        "params": {
+          "type": "rectangle",
+          "name": "Drag Handle",
+          "parent": {
+            "$ref": "f_19"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 36,
+          "height": 4,
+          "select": false,
+          "props": {
+            "fill": "#1A1D1F29",
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_21",
+        "params": {
+          "type": "frame",
+          "name": "Sheet Header",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 44,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_22",
+        "params": {
+          "type": "frame",
+          "name": "Header Left",
+          "parent": {
+            "$ref": "f_21"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 310,
+          "height": 42,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_23",
+        "params": {
+          "type": "text",
+          "text": "Setor Tabungan",
+          "parent": {
+            "$ref": "f_22"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 20,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_24",
+        "params": {
+          "type": "text",
+          "text": "Dana Darurat • Terkumpul Rp 12.500.000",
+          "parent": {
+            "$ref": "f_22"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12,
+            "fill": "#2A6B57",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_25",
+        "params": {
+          "type": "frame",
+          "name": "Close Button",
+          "parent": {
+            "$ref": "f_21"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 32,
+          "height": 32,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#EDEAE3",
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_26",
+        "params": {
+          "type": "text",
+          "text": "×",
+          "parent": {
+            "$ref": "f_25"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 18,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_27",
+        "params": {
+          "type": "frame",
+          "name": "Savings Mode Switch",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 40,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 4,
+            "padding": 4,
+            "fill": "#EDEAE3",
+            "cornerRadius": 14,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_28",
+        "params": {
+          "type": "frame",
+          "name": "Tab Setor",
+          "parent": {
+            "$ref": "f_27"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 180,
+          "height": 32,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#2A6B57",
+            "cornerRadius": 10,
+            "sizingH": "fill",
+            "sizingV": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_29",
+        "params": {
+          "type": "text",
+          "text": "↓  Setor Tabungan",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_30",
+        "params": {
+          "type": "frame",
+          "name": "Tab Tarik",
+          "parent": {
+            "$ref": "f_27"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 180,
+          "height": 32,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "none",
+            "cornerRadius": 10,
+            "sizingH": "fill",
+            "sizingV": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_31",
+        "params": {
+          "type": "text",
+          "text": "↑  Tarik Tabungan",
+          "parent": {
+            "$ref": "f_30"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12.5,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_32",
+        "params": {
+          "type": "frame",
+          "name": "Goal Progress Card",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 68,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 8,
+            "padding": [
+              12,
+              14,
+              12,
+              14
+            ],
+            "fill": "#F5F3EE",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 16,
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_33",
+        "params": {
+          "type": "frame",
+          "name": "Prog Top",
+          "parent": {
+            "$ref": "f_32"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 344,
+          "height": 18,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_34",
+        "params": {
+          "type": "text",
+          "text": "Progres Dana Darurat",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_35",
+        "params": {
+          "type": "text",
+          "text": "63% → 68%",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 12,
+            "fill": "#2A6B57",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_36",
+        "params": {
+          "type": "frame",
+          "name": "Progress Track",
+          "parent": {
+            "$ref": "f_32"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 344,
+          "height": 7,
+          "select": false,
+          "props": {
+            "fill": "#1A1D1F14",
+            "cornerRadius": 999,
+            "clip": true,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_37",
+        "params": {
+          "type": "rectangle",
+          "name": "Projected Bar",
+          "parent": {
+            "$ref": "f_36"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 234,
+          "height": 7,
+          "select": false,
+          "props": {
+            "fill": "#93C9B4",
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_38",
+        "params": {
+          "type": "rectangle",
+          "name": "Current Bar",
+          "parent": {
+            "$ref": "f_36"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 216,
+          "height": 7,
+          "select": false,
+          "props": {
+            "fill": "#2A6B57",
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_39",
+        "params": {
+          "type": "frame",
+          "name": "Prog Bottom",
+          "parent": {
+            "$ref": "f_32"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 344,
+          "height": 14,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_40",
+        "params": {
+          "type": "text",
+          "text": "Setelah setor: Rp 13.500.000",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_41",
+        "params": {
+          "type": "text",
+          "text": "Target Rp 20.000.000",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11,
+            "fill": "#8A8F98",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_42",
+        "params": {
+          "type": "frame",
+          "name": "Ledger Sync Banner",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 44,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "crossAlign": "center",
+            "padding": [
+              8,
+              12,
+              8,
+              12
+            ],
+            "fill": "#E6ECF3",
+            "cornerRadius": 14,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_43",
+        "params": {
+          "type": "frame",
+          "name": "Info Badge",
+          "parent": {
+            "$ref": "f_42"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 24,
+          "height": 24,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#3D5473",
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_44",
+        "params": {
+          "type": "text",
+          "text": "i",
+          "parent": {
+            "$ref": "f_43"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 12,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_45",
+        "params": {
+          "type": "text",
+          "text": "Setoran otomatis dicatat sebagai Pengeluaran (Tabungan) di Ledger.",
+          "parent": {
+            "$ref": "f_42"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 11.5,
+            "fill": "#3D5473",
+            "sizingH": "fill",
+            "lineHeight": 15
+          },
+          "width": 312
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_46",
+        "params": {
+          "type": "frame",
+          "name": "Nominal Setoran Section",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 108,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 7,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_47",
+        "params": {
+          "type": "text",
+          "text": "Nominal Setoran",
+          "parent": {
+            "$ref": "f_46"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_48",
+        "params": {
+          "type": "frame",
+          "name": "Nominal Input",
+          "parent": {
+            "$ref": "f_46"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 52,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 8,
+            "crossAlign": "center",
+            "padding": [
+              0,
+              16,
+              0,
+              16
+            ],
+            "fill": "#FFFFFF",
+            "stroke": "#2A6B57",
+            "strokeWeight": 1.5,
+            "cornerRadius": 18,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_49",
+        "params": {
+          "type": "text",
+          "text": "Rp",
+          "parent": {
+            "$ref": "f_48"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 16,
+            "fill": "#8A8F98"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_50",
+        "params": {
+          "type": "text",
+          "text": "1.000.000",
+          "parent": {
+            "$ref": "f_48"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 24,
+            "fill": "#16181A",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_51",
+        "params": {
+          "type": "frame",
+          "name": "Nominal Presets",
+          "parent": {
+            "$ref": "f_46"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 30,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 8,
+            "fill": "none",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_52",
+        "params": {
+          "type": "frame",
+          "name": "Preset 100rb",
+          "parent": {
+            "$ref": "f_51"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 86,
+          "height": 30,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 12,
+            "sizingH": "fill",
+            "sizingV": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_53",
+        "params": {
+          "type": "text",
+          "text": "100rb",
+          "parent": {
+            "$ref": "f_52"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_54",
+        "params": {
+          "type": "frame",
+          "name": "Preset 250rb",
+          "parent": {
+            "$ref": "f_51"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 86,
+          "height": 30,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 12,
+            "sizingH": "fill",
+            "sizingV": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_55",
+        "params": {
+          "type": "text",
+          "text": "250rb",
+          "parent": {
+            "$ref": "f_54"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_56",
+        "params": {
+          "type": "frame",
+          "name": "Preset 500rb",
+          "parent": {
+            "$ref": "f_51"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 86,
+          "height": 30,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 12,
+            "sizingH": "fill",
+            "sizingV": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_57",
+        "params": {
+          "type": "text",
+          "text": "500rb",
+          "parent": {
+            "$ref": "f_56"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_58",
+        "params": {
+          "type": "frame",
+          "name": "Preset 1 jt",
+          "parent": {
+            "$ref": "f_51"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 86,
+          "height": 30,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#E1EFE9",
+            "stroke": "#2A6B57",
+            "strokeWeight": 1.25,
+            "cornerRadius": 12,
+            "sizingH": "fill",
+            "sizingV": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_59",
+        "params": {
+          "type": "text",
+          "text": "1 jt",
+          "parent": {
+            "$ref": "f_58"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12,
+            "fill": "#2A6B57",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_60",
+        "params": {
+          "type": "frame",
+          "name": "Sumber Dana Radio Section",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 196,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 8,
+            "fill": "none",
+            "sizingH": "fill",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_61",
+        "params": {
+          "type": "text",
+          "text": "Pilih Sumber Dana",
+          "parent": {
+            "$ref": "f_60"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 12,
+            "fill": "#5A5F66"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_62",
+        "params": {
+          "type": "frame",
+          "name": "Radio BCA",
+          "parent": {
+            "$ref": "f_60"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 52,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              14,
+              0,
+              12
+            ],
+            "fill": "#E1EFE9",
+            "stroke": "#2A6B57",
+            "strokeWeight": 1.25,
+            "cornerRadius": 16,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_63",
+        "params": {
+          "type": "frame",
+          "name": "Radio Left BCA",
+          "parent": {
+            "$ref": "f_62"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 260,
+          "height": 36,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_64",
+        "params": {
+          "type": "frame",
+          "name": "Badge BCA",
+          "parent": {
+            "$ref": "f_63"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 34,
+          "height": 34,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#3D5473",
+            "cornerRadius": 10
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_65",
+        "params": {
+          "type": "text",
+          "text": "B",
+          "parent": {
+            "$ref": "f_64"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 13,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_66",
+        "params": {
+          "type": "frame",
+          "name": "Radio Text BCA",
+          "parent": {
+            "$ref": "f_63"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 210,
+          "height": 34,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 1,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_67",
+        "params": {
+          "type": "text",
+          "text": "BCA",
+          "parent": {
+            "$ref": "f_66"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_68",
+        "params": {
+          "type": "text",
+          "text": "Bank • Saldo Rp 14.200.000",
+          "parent": {
+            "$ref": "f_66"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_69",
+        "params": {
+          "type": "frame",
+          "name": "Radio Checked BCA",
+          "parent": {
+            "$ref": "f_62"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 22,
+          "height": 22,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#2A6B57",
+            "cornerRadius": 999
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_70",
+        "params": {
+          "type": "text",
+          "text": "✓",
+          "parent": {
+            "$ref": "f_69"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 12,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_71",
+        "params": {
+          "type": "frame",
+          "name": "Radio GoPay",
+          "parent": {
+            "$ref": "f_60"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 52,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              14,
+              0,
+              12
+            ],
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 16,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_72",
+        "params": {
+          "type": "frame",
+          "name": "Radio Left GoPay",
+          "parent": {
+            "$ref": "f_71"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 260,
+          "height": 36,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_73",
+        "params": {
+          "type": "frame",
+          "name": "Badge GoPay",
+          "parent": {
+            "$ref": "f_72"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 34,
+          "height": 34,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#2A6B57",
+            "cornerRadius": 10
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_74",
+        "params": {
+          "type": "text",
+          "text": "G",
+          "parent": {
+            "$ref": "f_73"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 13,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_75",
+        "params": {
+          "type": "frame",
+          "name": "Radio Text GoPay",
+          "parent": {
+            "$ref": "f_72"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 210,
+          "height": 34,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 1,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_76",
+        "params": {
+          "type": "text",
+          "text": "GoPay",
+          "parent": {
+            "$ref": "f_75"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_77",
+        "params": {
+          "type": "text",
+          "text": "E-Wallet • Saldo Rp 2.850.000",
+          "parent": {
+            "$ref": "f_75"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_78",
+        "params": {
+          "type": "ellipse",
+          "name": "Radio Empty GoPay",
+          "parent": {
+            "$ref": "f_71"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 20,
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1A1D1F24",
+            "strokeWeight": 1.5
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_79",
+        "params": {
+          "type": "frame",
+          "name": "Radio Tunai",
+          "parent": {
+            "$ref": "f_60"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 52,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              14,
+              0,
+              12
+            ],
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 16,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_80",
+        "params": {
+          "type": "frame",
+          "name": "Radio Left Tunai",
+          "parent": {
+            "$ref": "f_79"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 260,
+          "height": 36,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 10,
+            "crossAlign": "center",
+            "fill": "none",
+            "sizingH": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_81",
+        "params": {
+          "type": "frame",
+          "name": "Badge Tunai",
+          "parent": {
+            "$ref": "f_80"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 34,
+          "height": 34,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#1E4D45",
+            "cornerRadius": 10
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_82",
+        "params": {
+          "type": "text",
+          "text": "T",
+          "parent": {
+            "$ref": "f_81"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 13,
+            "fill": "#FAF9F6"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_83",
+        "params": {
+          "type": "frame",
+          "name": "Radio Text Tunai",
+          "parent": {
+            "$ref": "f_80"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 210,
+          "height": 34,
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 1,
+            "fill": "none",
+            "sizingH": "hug",
+            "sizingV": "hug"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_84",
+        "params": {
+          "type": "text",
+          "text": "Tunai",
+          "parent": {
+            "$ref": "f_83"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_85",
+        "params": {
+          "type": "text",
+          "text": "Tunai • Saldo Rp 1.400.000",
+          "parent": {
+            "$ref": "f_83"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5A5F66",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "e_86",
+        "params": {
+          "type": "ellipse",
+          "name": "Radio Empty Tunai",
+          "parent": {
+            "$ref": "f_79"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 20,
+          "height": 20,
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1A1D1F24",
+            "strokeWeight": 1.5
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_87",
+        "params": {
+          "type": "frame",
+          "name": "Catatan Setoran",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 40,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              14,
+              0,
+              14
+            ],
+            "fill": "#FFFFFF",
+            "stroke": "#1A1D1F14",
+            "strokeWeight": 0.75,
+            "cornerRadius": 14,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_88",
+        "params": {
+          "type": "text",
+          "text": "Alokasi rutin gajian bulan November",
+          "parent": {
+            "$ref": "f_87"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12.5,
+            "fill": "#16181A"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "f_89",
+        "params": {
+          "type": "frame",
+          "name": "CTA Konfirmasi Setor",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "x": 0,
+          "y": 0,
+          "width": 372,
+          "height": 50,
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#2A6B57",
+            "cornerRadius": 18,
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "t_90",
+        "params": {
+          "type": "text",
+          "text": "Konfirmasi Setor Rp 1.000.000",
+          "parent": {
+            "$ref": "f_89"
+          },
+          "x": 0,
+          "y": 0,
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14.5,
+            "fill": "#FAF9F6",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "as": "r_91",
+        "params": {
+          "type": "rectangle",
+          "name": "Home Indicator",
+          "parent": 227,
+          "x": 148,
+          "y": 903,
+          "width": 116,
+          "height": 4,
+          "select": false,
+          "props": {
+            "fill": "#1A1D1F2E",
+            "cornerRadius": 999
+          }
+        }
+      }
+    ]
+  }
+}

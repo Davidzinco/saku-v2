@@ -1,0 +1,3589 @@
+{
+  "command": "command.batch",
+  "params": {
+    "label": "V1 — Transaksi",
+    "commands": [
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Content",
+          "parent": 247,
+          "select": false,
+          "width": 412,
+          "x": 0,
+          "y": 0,
+          "props": {
+            "layout": "vertical",
+            "padding": [
+              24,
+              20,
+              110,
+              20
+            ],
+            "gap": 14,
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_1"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Header",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_2"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Transaksi",
+          "text": "Transaksi",
+          "parent": {
+            "$ref": "f_2"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 22,
+            "fill": "#1B2721",
+            "textAlign": "left",
+            "letterSpacing": -0.4
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "PrivacyButton",
+          "parent": {
+            "$ref": "f_2"
+          },
+          "select": false,
+          "width": 40,
+          "height": 40,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#1B272110",
+            "cornerRadius": 20
+          }
+        },
+        "as": "f_3"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Eye",
+          "parent": {
+            "$ref": "f_3"
+          },
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_4"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Eye_p0",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "path": "M2 10C4.2 6.2 6.9 4.5 10 4.5C13.1 4.5 15.8 6.2 18 10C15.8 13.8 13.1 15.5 10 15.5C6.9 15.5 4.2 13.8 2 10Z",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Eye_f0",
+          "parent": {
+            "$ref": "f_4"
+          },
+          "path": "M10 7.6A2.4 2.4 0 1 0 10 12.4A2.4 2.4 0 1 0 10 7.6Z",
+          "select": false,
+          "props": {
+            "fill": "#1B2721",
+            "stroke": "none"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "SaldoTotalCard",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "padding": [
+              16,
+              18,
+              16,
+              18
+            ],
+            "gap": 11,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "#F7F8F3",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 20
+          }
+        },
+        "as": "f_5"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Saldo total",
+          "text": "Saldo total",
+          "parent": {
+            "$ref": "f_5"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 12.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "HeroFigure",
+          "parent": {
+            "$ref": "f_5"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "baseline",
+            "gap": 7,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_6"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Rp",
+          "text": "Rp",
+          "parent": {
+            "$ref": "f_6"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 16,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "15.680.000",
+          "text": "15.680.000",
+          "parent": {
+            "$ref": "f_6"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 34,
+            "fill": "#1B2721",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            },
+            "letterSpacing": -0.8
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_5"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B272110",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "HeroStats",
+          "parent": {
+            "$ref": "f_5"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 6,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_7"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Stat/Masuk",
+          "parent": {
+            "$ref": "f_7"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_8"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Masuk",
+          "text": "Masuk",
+          "parent": {
+            "$ref": "f_8"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "+12.500.000",
+          "text": "+12.500.000",
+          "parent": {
+            "$ref": "f_8"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13.5,
+            "fill": "#39704F",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Stat/Keluar",
+          "parent": {
+            "$ref": "f_7"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_9"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Keluar",
+          "text": "Keluar",
+          "parent": {
+            "$ref": "f_9"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "−1.670.000",
+          "text": "−1.670.000",
+          "parent": {
+            "$ref": "f_9"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13.5,
+            "fill": "#A33A2B",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Stat/Selisih",
+          "parent": {
+            "$ref": "f_7"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_10"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Selisih",
+          "text": "Selisih",
+          "parent": {
+            "$ref": "f_10"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "+10.830.000",
+          "text": "+10.830.000",
+          "parent": {
+            "$ref": "f_10"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13.5,
+            "fill": "#39704F",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "AccountFilters",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 8,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_11"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Pill/Semua",
+          "parent": {
+            "$ref": "f_11"
+          },
+          "select": false,
+          "height": 34,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              15,
+              0,
+              15
+            ],
+            "sizingH": "hug",
+            "fill": "#1B2721",
+            "stroke": "none",
+            "strokeWeight": 0,
+            "cornerRadius": 17
+          }
+        },
+        "as": "f_12"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Semua",
+          "text": "Semua",
+          "parent": {
+            "$ref": "f_12"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 13,
+            "fill": "#FFFFFF",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Pill/Tunai",
+          "parent": {
+            "$ref": "f_11"
+          },
+          "select": false,
+          "height": 34,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              15,
+              0,
+              15
+            ],
+            "sizingH": "hug",
+            "fill": "#F7F8F3",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 17
+          }
+        },
+        "as": "f_13"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Tunai",
+          "text": "Tunai",
+          "parent": {
+            "$ref": "f_13"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 13,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Pill/GoPay",
+          "parent": {
+            "$ref": "f_11"
+          },
+          "select": false,
+          "height": 34,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              15,
+              0,
+              15
+            ],
+            "sizingH": "hug",
+            "fill": "#F7F8F3",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 17
+          }
+        },
+        "as": "f_14"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "GoPay",
+          "text": "GoPay",
+          "parent": {
+            "$ref": "f_14"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 13,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Pill/BCA",
+          "parent": {
+            "$ref": "f_11"
+          },
+          "select": false,
+          "height": 34,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "padding": [
+              0,
+              15,
+              0,
+              15
+            ],
+            "sizingH": "hug",
+            "fill": "#F7F8F3",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 17
+          }
+        },
+        "as": "f_15"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "BCA",
+          "text": "BCA",
+          "parent": {
+            "$ref": "f_15"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 13,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TrendCard",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "padding": [
+              16,
+              16,
+              16,
+              16
+            ],
+            "gap": 16,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "#F7F8F3",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 20
+          }
+        },
+        "as": "f_16"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "TrendHeader",
+          "parent": {
+            "$ref": "f_16"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_17"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "PrevMonth",
+          "parent": {
+            "$ref": "f_17"
+          },
+          "select": false,
+          "width": 30,
+          "height": 30,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#1B272110",
+            "cornerRadius": 15
+          }
+        },
+        "as": "f_18"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/ChevLeft",
+          "parent": {
+            "$ref": "f_18"
+          },
+          "select": false,
+          "width": 13,
+          "height": 13,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_19"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/ChevLeft_p0",
+          "parent": {
+            "$ref": "f_19"
+          },
+          "path": "M9 3L4.5 7L9 11",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.7,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "November 2026",
+          "text": "November 2026",
+          "parent": {
+            "$ref": "f_17"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14,
+            "fill": "#1B2721",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "NextMonth",
+          "parent": {
+            "$ref": "f_17"
+          },
+          "select": false,
+          "width": 30,
+          "height": 30,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#1B272110",
+            "cornerRadius": 15
+          }
+        },
+        "as": "f_20"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/ChevRight",
+          "parent": {
+            "$ref": "f_20"
+          },
+          "select": false,
+          "width": 13,
+          "height": 13,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_21"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/ChevRight_p0",
+          "parent": {
+            "$ref": "f_21"
+          },
+          "path": "M5 3L9.5 7L5 11",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.7,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "BarChart",
+          "parent": {
+            "$ref": "f_16"
+          },
+          "select": false,
+          "height": 80,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "max",
+            "padding": [
+              0,
+              8,
+              0,
+              8
+            ],
+            "sizingH": "fill",
+            "fill": "none"
+          }
+        },
+        "as": "f_22"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Bar/Jul",
+          "parent": {
+            "$ref": "f_22"
+          },
+          "select": false,
+          "width": 34,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "max",
+            "crossAlign": "center",
+            "gap": 7,
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_23"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Rect/Jul",
+          "parent": {
+            "$ref": "f_23"
+          },
+          "width": 28,
+          "height": 2,
+          "select": false,
+          "props": {
+            "fill": "#BDC4BC",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Jul",
+          "text": "Jul",
+          "parent": {
+            "$ref": "f_23"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Bar/Agu",
+          "parent": {
+            "$ref": "f_22"
+          },
+          "select": false,
+          "width": 34,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "max",
+            "crossAlign": "center",
+            "gap": 7,
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_24"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Rect/Agu",
+          "parent": {
+            "$ref": "f_24"
+          },
+          "width": 28,
+          "height": 24,
+          "select": false,
+          "props": {
+            "fill": "#BDC4BC",
+            "cornerRadius": 5
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Agu",
+          "text": "Agu",
+          "parent": {
+            "$ref": "f_24"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Bar/Sep",
+          "parent": {
+            "$ref": "f_22"
+          },
+          "select": false,
+          "width": 34,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "max",
+            "crossAlign": "center",
+            "gap": 7,
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_25"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Rect/Sep",
+          "parent": {
+            "$ref": "f_25"
+          },
+          "width": 28,
+          "height": 36,
+          "select": false,
+          "props": {
+            "fill": "#BDC4BC",
+            "cornerRadius": 5
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Sep",
+          "text": "Sep",
+          "parent": {
+            "$ref": "f_25"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Bar/Okt",
+          "parent": {
+            "$ref": "f_22"
+          },
+          "select": false,
+          "width": 34,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "max",
+            "crossAlign": "center",
+            "gap": 7,
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_26"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Rect/Okt",
+          "parent": {
+            "$ref": "f_26"
+          },
+          "width": 28,
+          "height": 52,
+          "select": false,
+          "props": {
+            "fill": "#BDC4BC",
+            "cornerRadius": 5
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Okt",
+          "text": "Okt",
+          "parent": {
+            "$ref": "f_26"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Bar/Nov",
+          "parent": {
+            "$ref": "f_22"
+          },
+          "select": false,
+          "width": 34,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "max",
+            "crossAlign": "center",
+            "gap": 7,
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_27"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Rect/Nov",
+          "parent": {
+            "$ref": "f_27"
+          },
+          "width": 28,
+          "height": 32,
+          "select": false,
+          "props": {
+            "fill": "#23418F",
+            "cornerRadius": 5
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Nov",
+          "text": "Nov",
+          "parent": {
+            "$ref": "f_27"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Bold",
+            "fontSize": 11.5,
+            "fill": "#1B2721",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Bar/Des",
+          "parent": {
+            "$ref": "f_22"
+          },
+          "select": false,
+          "width": 34,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "max",
+            "crossAlign": "center",
+            "gap": 7,
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_28"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Rect/Des",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "width": 28,
+          "height": 2,
+          "select": false,
+          "props": {
+            "fill": "#BDC4BC",
+            "cornerRadius": 1
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Des",
+          "text": "Des",
+          "parent": {
+            "$ref": "f_28"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "DerivedStats",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "gap": 12,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_29"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "D/Rata-rata keluar",
+          "parent": {
+            "$ref": "f_29"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_30"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Rata-rata keluar",
+          "text": "Rata-rata keluar",
+          "parent": {
+            "$ref": "f_30"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Rp 417.500",
+          "text": "Rp 417.500",
+          "parent": {
+            "$ref": "f_30"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14.5,
+            "fill": "#1B2721",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "D/Hari aktif",
+          "parent": {
+            "$ref": "f_29"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_31"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Hari aktif",
+          "text": "Hari aktif",
+          "parent": {
+            "$ref": "f_31"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "6 hari",
+          "text": "6 hari",
+          "parent": {
+            "$ref": "f_31"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14.5,
+            "fill": "#1B2721",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "D/Catatan",
+          "parent": {
+            "$ref": "f_29"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_32"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Catatan",
+          "text": "Catatan",
+          "parent": {
+            "$ref": "f_32"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 11.5,
+            "fill": "#5C6A62",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "6 trx",
+          "text": "6 trx",
+          "parent": {
+            "$ref": "f_32"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14.5,
+            "fill": "#1B2721",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "LedgerList",
+          "parent": {
+            "$ref": "f_1"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 0,
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_33"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tx/Tagihan internet",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              12,
+              0,
+              12,
+              0
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_34"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Left",
+          "parent": {
+            "$ref": "f_34"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 12,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_35"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "IconBadge",
+          "parent": {
+            "$ref": "f_35"
+          },
+          "select": false,
+          "width": 40,
+          "height": 40,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F7F8F3",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 20
+          }
+        },
+        "as": "f_36"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Home",
+          "parent": {
+            "$ref": "f_36"
+          },
+          "select": false,
+          "width": 18,
+          "height": 18,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_37"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Home_p0",
+          "parent": {
+            "$ref": "f_37"
+          },
+          "path": "M3 9.2L10 3.5L17 9.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Home_p1",
+          "parent": {
+            "$ref": "f_37"
+          },
+          "path": "M5 8.2V16.5H15V8.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Home_p2",
+          "parent": {
+            "$ref": "f_37"
+          },
+          "path": "M8.5 16.5V12.2H11.5V16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Info",
+          "parent": {
+            "$ref": "f_35"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_38"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Tagihan internet",
+          "text": "Tagihan internet",
+          "parent": {
+            "$ref": "f_38"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14.5,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "11/11 · BCA",
+          "text": "11/11 · BCA",
+          "parent": {
+            "$ref": "f_38"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5C6A62",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_34"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "crossAlign": "max",
+            "gap": 2,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_39"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "−340.000",
+          "text": "−340.000",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14.5,
+            "fill": "#A33A2B",
+            "textAlign": "right",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "15.680.000",
+          "text": "15.680.000",
+          "parent": {
+            "$ref": "f_39"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5C6A62",
+            "textAlign": "right",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B272110",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tx/Bensin mingguan",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              12,
+              0,
+              12,
+              0
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_40"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Left",
+          "parent": {
+            "$ref": "f_40"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 12,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_41"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "IconBadge",
+          "parent": {
+            "$ref": "f_41"
+          },
+          "select": false,
+          "width": 40,
+          "height": 40,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F7F8F3",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 20
+          }
+        },
+        "as": "f_42"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Car",
+          "parent": {
+            "$ref": "f_42"
+          },
+          "select": false,
+          "width": 18,
+          "height": 18,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_43"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Car_p0",
+          "parent": {
+            "$ref": "f_43"
+          },
+          "path": "M4.5 10L6 6.2H14L15.5 10",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.5,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Car_p1",
+          "parent": {
+            "$ref": "f_43"
+          },
+          "path": "M3.5 10H16.5V14.2H3.5V10Z",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.5,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Car_p2",
+          "parent": {
+            "$ref": "f_43"
+          },
+          "path": "M5.5 14.2V15.8",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.5,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Car_p3",
+          "parent": {
+            "$ref": "f_43"
+          },
+          "path": "M14.5 14.2V15.8",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.5,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Car_p4",
+          "parent": {
+            "$ref": "f_43"
+          },
+          "path": "M6.2 12H7.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.5,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Car_p5",
+          "parent": {
+            "$ref": "f_43"
+          },
+          "path": "M12.8 12H13.8",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.5,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Info",
+          "parent": {
+            "$ref": "f_41"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_44"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Bensin mingguan",
+          "text": "Bensin mingguan",
+          "parent": {
+            "$ref": "f_44"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14.5,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "09/11 · Tunai",
+          "text": "09/11 · Tunai",
+          "parent": {
+            "$ref": "f_44"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5C6A62",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_40"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "crossAlign": "max",
+            "gap": 2,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_45"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "−85.000",
+          "text": "−85.000",
+          "parent": {
+            "$ref": "f_45"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14.5,
+            "fill": "#A33A2B",
+            "textAlign": "right",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "16.020.000",
+          "text": "16.020.000",
+          "parent": {
+            "$ref": "f_45"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5C6A62",
+            "textAlign": "right",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B272110",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tx/Setor Dana Darurat",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              12,
+              0,
+              12,
+              0
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_46"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Left",
+          "parent": {
+            "$ref": "f_46"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 12,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_47"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "IconBadge",
+          "parent": {
+            "$ref": "f_47"
+          },
+          "select": false,
+          "width": 40,
+          "height": 40,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F7F8F3",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 20
+          }
+        },
+        "as": "f_48"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Wallet",
+          "parent": {
+            "$ref": "f_48"
+          },
+          "select": false,
+          "width": 18,
+          "height": 18,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_49"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Wallet_p0",
+          "parent": {
+            "$ref": "f_49"
+          },
+          "path": "M3.5 6.5H16.5V15.5H3.5V6.5Z",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Wallet_p1",
+          "parent": {
+            "$ref": "f_49"
+          },
+          "path": "M5.5 6.5V5.2C5.5 4.5 6.1 4 6.8 4H13.2C13.9 4 14.5 4.5 14.5 5.2V6.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Wallet_p2",
+          "parent": {
+            "$ref": "f_49"
+          },
+          "path": "M3.5 10H16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Info",
+          "parent": {
+            "$ref": "f_47"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_50"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Setor Dana Darurat",
+          "text": "Setor Dana Darurat",
+          "parent": {
+            "$ref": "f_50"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14.5,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "07/11 · BCA",
+          "text": "07/11 · BCA",
+          "parent": {
+            "$ref": "f_50"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5C6A62",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_46"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "crossAlign": "max",
+            "gap": 2,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_51"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "−1.200.000",
+          "text": "−1.200.000",
+          "parent": {
+            "$ref": "f_51"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14.5,
+            "fill": "#A33A2B",
+            "textAlign": "right",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "16.105.000",
+          "text": "16.105.000",
+          "parent": {
+            "$ref": "f_51"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5C6A62",
+            "textAlign": "right",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B272110",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tx/Isi saldo GoPay",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              12,
+              0,
+              12,
+              0
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_52"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Left",
+          "parent": {
+            "$ref": "f_52"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 12,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_53"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "IconBadge",
+          "parent": {
+            "$ref": "f_53"
+          },
+          "select": false,
+          "width": 40,
+          "height": 40,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#23418F18",
+            "stroke": "none",
+            "strokeWeight": 0,
+            "cornerRadius": 20
+          }
+        },
+        "as": "f_54"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Transfer",
+          "parent": {
+            "$ref": "f_54"
+          },
+          "select": false,
+          "width": 18,
+          "height": 18,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_55"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Transfer_p0",
+          "parent": {
+            "$ref": "f_55"
+          },
+          "path": "M4 7.5H15.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Transfer_p1",
+          "parent": {
+            "$ref": "f_55"
+          },
+          "path": "M12.5 4.8L15.5 7.5L12.5 10.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Transfer_p2",
+          "parent": {
+            "$ref": "f_55"
+          },
+          "path": "M16 12.5H4.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Transfer_p3",
+          "parent": {
+            "$ref": "f_55"
+          },
+          "path": "M7.5 9.8L4.5 12.5L7.5 15.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Info",
+          "parent": {
+            "$ref": "f_53"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_56"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Isi saldo GoPay",
+          "text": "Isi saldo GoPay",
+          "parent": {
+            "$ref": "f_56"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14.5,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "05/11 · Pindah",
+          "text": "05/11 · Pindah",
+          "parent": {
+            "$ref": "f_56"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5C6A62",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_52"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "crossAlign": "max",
+            "gap": 2,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_57"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "1.500.000",
+          "text": "1.500.000",
+          "parent": {
+            "$ref": "f_57"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14.5,
+            "fill": "#23418F",
+            "textAlign": "right",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "17.305.000",
+          "text": "17.305.000",
+          "parent": {
+            "$ref": "f_57"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5C6A62",
+            "textAlign": "right",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "rectangle",
+          "name": "Hairline",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "width": 100,
+          "height": 1,
+          "select": false,
+          "props": {
+            "fill": "#1B272110",
+            "sizingH": "fill"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tx/Makan siang kantor",
+          "parent": {
+            "$ref": "f_33"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              12,
+              0,
+              12,
+              0
+            ],
+            "sizingH": "fill",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_58"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Left",
+          "parent": {
+            "$ref": "f_58"
+          },
+          "select": false,
+          "props": {
+            "layout": "horizontal",
+            "crossAlign": "center",
+            "gap": 12,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_59"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "IconBadge",
+          "parent": {
+            "$ref": "f_59"
+          },
+          "select": false,
+          "width": 40,
+          "height": 40,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#F7F8F3",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 20
+          }
+        },
+        "as": "f_60"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Food",
+          "parent": {
+            "$ref": "f_60"
+          },
+          "select": false,
+          "width": 18,
+          "height": 18,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_61"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Food_p0",
+          "parent": {
+            "$ref": "f_61"
+          },
+          "path": "M4 10H16",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Food_p1",
+          "parent": {
+            "$ref": "f_61"
+          },
+          "path": "M5 10C5 13.5 7.2 15.5 10 15.5C12.8 15.5 15 13.5 15 10",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Food_p2",
+          "parent": {
+            "$ref": "f_61"
+          },
+          "path": "M8 15.5H12",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#1B2721",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Info",
+          "parent": {
+            "$ref": "f_59"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "gap": 2,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_62"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Makan siang kantor",
+          "text": "Makan siang kantor",
+          "parent": {
+            "$ref": "f_62"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 14.5,
+            "fill": "#1B2721",
+            "textAlign": "left"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "03/11 · GoPay",
+          "text": "03/11 · GoPay",
+          "parent": {
+            "$ref": "f_62"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5C6A62",
+            "textAlign": "left",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Right",
+          "parent": {
+            "$ref": "f_58"
+          },
+          "select": false,
+          "props": {
+            "layout": "vertical",
+            "crossAlign": "max",
+            "gap": 2,
+            "sizingH": "hug",
+            "sizingV": "hug",
+            "fill": "none"
+          }
+        },
+        "as": "f_63"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "−45.000",
+          "text": "−45.000",
+          "parent": {
+            "$ref": "f_63"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 14.5,
+            "fill": "#A33A2B",
+            "textAlign": "right",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "17.305.000",
+          "text": "17.305.000",
+          "parent": {
+            "$ref": "f_63"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Regular",
+            "fontSize": 12,
+            "fill": "#5C6A62",
+            "textAlign": "right",
+            "features": {
+              "tnum": true
+            }
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "V1 Floating Dock",
+          "parent": 247,
+          "select": false,
+          "width": 372,
+          "height": 66,
+          "x": 20,
+          "y": 827,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "spaceBetween",
+            "crossAlign": "center",
+            "padding": [
+              5,
+              6,
+              5,
+              6
+            ],
+            "gap": 2,
+            "fill": "#F7F8F3EC",
+            "stroke": "#1B27211C",
+            "strokeWeight": 1,
+            "cornerRadius": 33,
+            "effects": [
+              {
+                "type": "dropShadow",
+                "color": "#1B27211C",
+                "offset": [
+                  0,
+                  8
+                ],
+                "radius": 24
+              }
+            ]
+          }
+        },
+        "as": "f_64"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab/Home",
+          "parent": {
+            "$ref": "f_64"
+          },
+          "select": false,
+          "width": 70,
+          "height": 56,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "none",
+            "cornerRadius": 28
+          }
+        },
+        "as": "f_65"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Home",
+          "parent": {
+            "$ref": "f_65"
+          },
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_66"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Home_p0",
+          "parent": {
+            "$ref": "f_66"
+          },
+          "path": "M3 9.2L10 3.5L17 9.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Home_p1",
+          "parent": {
+            "$ref": "f_66"
+          },
+          "path": "M5 8.2V16.5H15V8.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Home_p2",
+          "parent": {
+            "$ref": "f_66"
+          },
+          "path": "M8.5 16.5V12.2H11.5V16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.6,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Home",
+          "text": "Home",
+          "parent": {
+            "$ref": "f_65"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5C6A62",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab/Transaksi",
+          "parent": {
+            "$ref": "f_64"
+          },
+          "select": false,
+          "width": 70,
+          "height": 56,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "#23418F1A",
+            "cornerRadius": 28
+          }
+        },
+        "as": "f_67"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Receipt",
+          "parent": {
+            "$ref": "f_67"
+          },
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_68"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Receipt_p0",
+          "parent": {
+            "$ref": "f_68"
+          },
+          "path": "M5 3.5H15V16.5L13 15.2L11 16.5L9 15.2L7 16.5L5 15.2V3.5Z",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Receipt_p1",
+          "parent": {
+            "$ref": "f_68"
+          },
+          "path": "M7.8 7.5H12.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Receipt_p2",
+          "parent": {
+            "$ref": "f_68"
+          },
+          "path": "M7.8 10.5H12.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#23418F",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Transaksi",
+          "text": "Transaksi",
+          "parent": {
+            "$ref": "f_67"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Semi Bold",
+            "fontSize": 10.5,
+            "fill": "#23418F",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "CenterFAB",
+          "parent": {
+            "$ref": "f_64"
+          },
+          "select": false,
+          "width": 52,
+          "height": 52,
+          "props": {
+            "layout": "horizontal",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "fill": "#23418F",
+            "cornerRadius": 26,
+            "effects": [
+              {
+                "type": "dropShadow",
+                "color": "#23418F40",
+                "offset": [
+                  0,
+                  4
+                ],
+                "radius": 12
+              }
+            ]
+          }
+        },
+        "as": "f_69"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Plus",
+          "parent": {
+            "$ref": "f_69"
+          },
+          "select": false,
+          "width": 22,
+          "height": 22,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_70"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Plus_p0",
+          "parent": {
+            "$ref": "f_70"
+          },
+          "path": "M11.0 4.8L11.0 17.2",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#FFFFFF",
+            "strokeWeight": 2.1,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Plus_p1",
+          "parent": {
+            "$ref": "f_70"
+          },
+          "path": "M4.8 11.0L17.2 11.0",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#FFFFFF",
+            "strokeWeight": 2.1,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab/Nabung",
+          "parent": {
+            "$ref": "f_64"
+          },
+          "select": false,
+          "width": 70,
+          "height": 56,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "none",
+            "cornerRadius": 28
+          }
+        },
+        "as": "f_71"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Wallet",
+          "parent": {
+            "$ref": "f_71"
+          },
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_72"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Wallet_p0",
+          "parent": {
+            "$ref": "f_72"
+          },
+          "path": "M3.5 6.5H16.5V15.5H3.5V6.5Z",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Wallet_p1",
+          "parent": {
+            "$ref": "f_72"
+          },
+          "path": "M5.5 6.5V5.2C5.5 4.5 6.1 4 6.8 4H13.2C13.9 4 14.5 4.5 14.5 5.2V6.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Wallet_p2",
+          "parent": {
+            "$ref": "f_72"
+          },
+          "path": "M3.5 10H16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Nabung",
+          "text": "Nabung",
+          "parent": {
+            "$ref": "f_71"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5C6A62",
+            "textAlign": "center"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Tab/Setting",
+          "parent": {
+            "$ref": "f_64"
+          },
+          "select": false,
+          "width": 70,
+          "height": 56,
+          "props": {
+            "layout": "vertical",
+            "mainAlign": "center",
+            "crossAlign": "center",
+            "gap": 3,
+            "fill": "none",
+            "cornerRadius": 28
+          }
+        },
+        "as": "f_73"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "frame",
+          "name": "Icon/Sliders",
+          "parent": {
+            "$ref": "f_73"
+          },
+          "select": false,
+          "width": 20,
+          "height": 20,
+          "props": {
+            "fill": "none",
+            "clip": false
+          }
+        },
+        "as": "f_74"
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p0",
+          "parent": {
+            "$ref": "f_74"
+          },
+          "path": "M3.5 6H16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p1",
+          "parent": {
+            "$ref": "f_74"
+          },
+          "path": "M3.5 10H16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p2",
+          "parent": {
+            "$ref": "f_74"
+          },
+          "path": "M3.5 14H16.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p3",
+          "parent": {
+            "$ref": "f_74"
+          },
+          "path": "M7 4.5V7.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p4",
+          "parent": {
+            "$ref": "f_74"
+          },
+          "path": "M13 8.5V11.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "vector",
+          "name": "Icon/Sliders_p5",
+          "parent": {
+            "$ref": "f_74"
+          },
+          "path": "M8.5 12.5V15.5",
+          "select": false,
+          "props": {
+            "fill": "none",
+            "stroke": "#5C6A62",
+            "strokeWeight": 1.55,
+            "strokeCap": "round",
+            "strokeJoin": "round"
+          }
+        }
+      },
+      {
+        "command": "node.create",
+        "params": {
+          "type": "text",
+          "name": "Setting",
+          "text": "Setting",
+          "parent": {
+            "$ref": "f_73"
+          },
+          "select": false,
+          "props": {
+            "fontFamily": "Inter",
+            "fontStyle": "Medium",
+            "fontSize": 10.5,
+            "fill": "#5C6A62",
+            "textAlign": "center"
+          }
+        }
+      }
+    ]
+  }
+}
