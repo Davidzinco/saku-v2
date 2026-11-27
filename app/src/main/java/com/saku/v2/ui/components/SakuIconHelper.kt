@@ -104,26 +104,21 @@ fun SakuTintedIconBadge(
     modifier: Modifier = Modifier
 ) {
     val colors = SakuTheme.colors
-    val lum = tint.luminance()
-    val resolvedTint = liftAccentForTheme(tint, colors.isDark)
-    val resolvedContainer = if (colors.isDark && containerColor.alpha < 0.25f && lum < 0.25f) {
-        resolvedTint.copy(alpha = 0.18f)
-    } else {
-        containerColor
-    }
+    @Suppress("UNUSED_VARIABLE")
+    val unusedContainer = containerColor
+    val solidBg = liftAccentForTheme(tint, colors.isDark).copy(alpha = 1f)
     val shape = RoundedCornerShape(size * 0.30f)
     Box(
         modifier = modifier
             .size(size)
             .clip(shape)
-            .background(resolvedContainer)
-            .border(width = 0.75.dp, color = resolvedTint.copy(alpha = 0.20f), shape = shape),
+            .background(solidBg),
         contentAlignment = Alignment.Center
     ) {
         Icon(
             imageVector = sakuIconForKey(iconKey),
             contentDescription = null,
-            tint = resolvedTint,
+            tint = Color.White,
             modifier = Modifier.size(size * 0.52f)
         )
     }
